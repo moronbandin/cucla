@@ -1,0 +1,105 @@
+site_name: Cultura Clásica
+
+theme:
+  name: material
+  language: gl
+
+  # CORES (modo claro/escuro con conmutador)
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green        # ex.: indigo, teal, blue, deep purple... ou HEX vía extra CSS
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Mudar a modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar a modo claro
+
+  # FONTE (texto e código)
+  font:
+    text: "Inter"          # ou "Roboto", "Source Sans 3", "Noto Sans"...
+    code: "JetBrains Mono" # ou "Fira Code", "Roboto Mono"...
+
+  # LOGO e FAVICON (pon os ficheiros en docs/assets/)
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+
+  # MÁIS FUNCIONALIDADES dispoñibles
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - navigation.instant       # navegación instantánea
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy        # botón copiar en bloques de código
+    - content.action.edit      # ligazón “Editar esta páxina” (configura repo abaixo)
+    - content.tabs.link
+    - header.autohide
+
+plugins:
+  - search
+  - tags
+
+# Extensións Markdown
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.highlight
+  - pymdownx.extra
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+# CSS/JS extra para personalizar a tope
+extra_css:
+  - styles/extra.css
+extra_javascript:
+  - js/extra.js
+
+# Info do repo (para botón “Editar esta páxina” e ligazóns a GitHub)
+repo_url: https://github.com/usuario/repo
+repo_name: usuario/repo
+edit_uri: edit/main/docs/
+
+# Avisos, analíticas, social, etc. (opcional)
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/usuario
+      name: GitHub
+  # announcement: "🗞️ Aviso: entrega do proxecto o venres."
+
+nav:
+  - Inicio: index.md
+  - 1AV:
+      - "UD1 · Xeografía clásica": UNIDADES/1AV/1/index.md
+      - "UD2 · Historia xeral (Grecia→Roma)": UNIDADES/1AV/2/index.md
+      - "UD3 · Mitoloxía e pervivencia": UNIDADES/1AV/3/index.md
+      - "UD4 · Relixión grega e romana": UNIDADES/1AV/4/index.md
+  - 2AV:
+      - "UD5 · Arte grega": UNIDADES/2AV/5/index.md
+      - "UD6 · Arte romana e romanización": UNIDADES/2AV/6/index.md
+      - "UD7 · Sociedade e vida cotiá": UNIDADES/2AV/7/index.md
+      - "UD8 · Política e dereito": UNIDADES/2AV/8/index.md
+  - 3AV:
+      - "UD9 · Linguas e alfabetos": UNIDADES/3AV/9/index.md
+      - "UD10 · Léxico: latinismos e helenismos": UNIDADES/3AV/10/index.md
+      - "UD11 · Espectáculos e deporte": UNIDADES/3AV/11/index.md
+      - "UD12 · Pervivencia e recepción crítica": UNIDADES/3AV/12/index.md
