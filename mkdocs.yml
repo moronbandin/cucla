@@ -75,15 +75,15 @@ extra_javascript:
   - js/extra.js
 
 # Info do repo (para botón “Editar esta páxina” e ligazóns a GitHub)
-repo_url: https://github.com/usuario/repo
-repo_name: usuario/repo
+repo_url: https://github.com/moronbandin/cucla
+repo_name: moronbandin/cucla
 edit_uri: edit/main/docs/
 
 # Avisos, analíticas, social, etc. (opcional)
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/usuario
+      link: https://github.com/moronbandin
       name: GitHub
   # announcement: "🗞️ Aviso: entrega do proxecto o venres."
 

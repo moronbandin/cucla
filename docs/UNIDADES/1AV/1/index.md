@@ -8,6 +8,10 @@
 
 ---
 
+[👉 Accede á teoría completa e interactiva](./teoria/index.md){ .md-button .md-button--primary }
+
+***
+
 ## Para proxectar na aula
 
 - **PDF base:** [Libro de teoría completo](./materiais/ud1_apuntes.pdf){target=_blank}
@@ -18,6 +22,7 @@
 > 💡 Suxestión: abre as ligazóns en pestana nova cando o uses en clase para ir pasando de mapa a mapa ou entre PDFs sen perder a páxina principal.
 
 ---
+
 
 ## Exercicios (solucións ocultas)
 

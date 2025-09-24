@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="gl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa · Cidades da Italia romana (vista satélite)</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin
+  ></script>
+
+  <style>
+    html, body { height:100%; margin:0; }
+    #map { height:100%; width:100%; }
+    .credit {
+      position:absolute; right:.5rem; bottom:.5rem; background:rgba(255,255,255,.9);
+      padding:.25rem .5rem; border-radius:.4rem; font:12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",Arial,sans-serif;
+      box-shadow:0 1px 4px rgba(0,0,0,.15);
+    }
+    .leaflet-popup-content h3 { margin:.2rem 0 .2rem; font-size:16px; }
+    .leaflet-popup-content p { margin:.2rem 0; }
+    .leaflet-popup-content small { color:#555; }
+    .md-btn { display:inline-block; padding:.35rem .6rem; border:1px solid #ccc; border-radius:.4rem; background:#fff; font-size:12px; text-decoration:none;}
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="credit">Base satélite: © Esri</div>
+
+  <script>
+    // Mapa base (SATÉLITE)
+    const map = L.map('map', { zoomControl:true, minZoom:4, maxZoom:18 }).setView([42.5, 12.5], 6);
+
+    // Esri World Imagery (satélite)
+    const esriImagery = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      {
+        maxZoom: 18,
+        attribution: 'Imagery © Esri'
+      }
+    ).addTo(map);
+
+    // (Opcional) capa de rótulos en branco e negro por riba do satélite
+    const labels = L.tileLayer(
+      'https://stamen-tiles.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png',
+      { maxZoom: 18, opacity: 0.6, attribution: 'Labels © Stamen' }
+    ).addTo(map);
+
+    // ---- CIDADES E LUGARES CLAVE ----
+    // NOTA: podes editar/engadir items libremente; coords [lat, lon]
+    const lugares = [
+      // Italia setentrional / Cisalpina
+      {
+        name: "Mediolānum (Milán)",
+        coords: [45.464, 9.190],
+        html: `
+          <h3>Mediolānum (Milán)</h3>
+          <small>Capital do noroeste; vía <i>Via Aemilia</i> e portas alpinas.</small>
+          <p>Centro político importante no Baixo Imperio (capital de Occidente en s. IV). Nodo de estradas cara aos Alpes.</p>
+        `
+      },
+      {
+        name: "Verona",
+        coords: [45.438, 10.992],
+        html: `
+          <h3>Verona</h3>
+          <small>Teatro e anfiteatro (Arena) moi conservados.</small>
+          <p>Punto estratéxico no Adige; control das rutas alpinas e da chaira padana oriental.</p>
+        `
+      },
+      {
+        name: "Aquileia",
+        coords: [45.768, 13.369],
+        html: `
+          <h3>Aquileia</h3>
+          <small>Grande porto e base militar fronte ao Danubio.</small>
+          <p>Centro comercial e defensivo clave cara ao leste; mosaicos paleocristiáns notables.</p>
+        `
+      },
+
+      // Costa Adriática / Italia central
+      {
+        name: "Arimīnum (Rímini)",
+        coords: [44.222, 12.052],
+        html: `
+          <h3>Arimīnum (Rímini)</h3>
+          <small>Extremo da <i>Via Flaminia</i> no Adriático.</small>
+          <p>Arco de Augusto e ponte de Tiberio: infraestruturas viarias emblemáticas.</p>
+        `
+      },
+      {
+        name: "Ravenna",
+        coords: [44.418, 12.203],
+        html: `
+          <h3>Ravenna</h3>
+          <small>Porto militar romano (Clasís); capital de Occidente no s. V.</small>
+          <p>Ligazón clave co Adriático. Famosa polos mosaicos tardoantigos.</p>
+        `
+      },
+
+      // Lacio / Roma
+      {
+        name: "Roma",
+        coords: [41.893, 12.483],
+        html: `
+          <h3>Roma</h3>
+          <small>Caput mundi — sete outeiros xunto ao Tíber.</small>
+          <p>Centro político, relixioso e económico do mundo romano durante séculos.</p>
+          <a class="md-btn" href="https://it.wikipedia.org/wiki/Roma_antica" target="_blank" rel="noopener">+ info</a>
+        `
+      },
+      {
+        name: "Ostia (porto de Roma)",
+        coords: [41.735, 12.276],
+        html: `
+          <h3>Ostia (porto de Roma)</h3>
+          <small>Entrada e saída de gran e mercadorías polo Tirreno.</small>
+          <p>Urbanismo ortogonal, ínsulae, horrea (silos). Conxunto arqueolóxico excelente para a vida cotiá.</p>
+        `
+      },
+      {
+        name: "Capua",
+        coords: [41.105, 14.217],
+        html: `
+          <h3>Capua</h3>
+          <small>Encrucillada viaria na Campania.</small>
+          <p>Importante centro itálico e romano; relación coas guerras samnitas e a Segunda Guerra Púnica.</p>
+        `
+      },
+      {
+        name: "Beneventum (Benevento)",
+        coords: [41.129, 14.782],
+        html: `
+          <h3>Beneventum (Benevento)</h3>
+          <small>Arco de Traxano; nó da <i>Via Appia</i> ao sur.</small>
+          <p>Punto de paso esencial cara a Apulia e Brundisium.</p>
+        `
+      },
+
+      // Campania / Vesubio
+      {
+        name: "Vesubio (volcán)",
+        coords: [40.821, 14.427],
+        html: `
+          <h3>Vesubio</h3>
+          <small>Erupción do 79 d.C.</small>
+          <p>Sepultou Pompeia e Herculano; fonte principal para coñecer a vida urbana romana.</p>
+        `
+      },
+      {
+        name: "Pompeia",
+        coords: [40.748, 14.486],
+        html: `
+          <h3>Pompeia</h3>
+          <small>Cidade sepultada polo Vesubio (79 d.C.).</small>
+          <p>Rúas, frescos, termas, anfiteatro: fotografía conxelada da vida no s. I.</p>
+        `
+      },
+      {
+        name: "Herculano",
+        coords: [40.806, 14.348],
+        html: `
+          <h3>Herculano</h3>
+          <small>Preservación en madeira e materiais orgánicos excepcional.</small>
+          <p>Impacto de fluxos piroclásticos distinto ao de Pompeia.</p>
+        `
+      },
+      {
+        name: "Neápolis (Nápoles)",
+        coords: [40.851, 14.268],
+        html: `
+          <h3>Neápolis (Nápoles)</h3>
+          <small>Fundación grega; importante porto romano.</small>
+          <p>Centro cultural helenófono no Occidente; forte continuidade urbana.</p>
+        `
+      },
+
+      // Sur da península / Apulia / Calabria
+      {
+        name: "Tarentum (Tarento)",
+        coords: [40.469, 17.241],
+        html: `
+          <h3>Tarentum (Tarento)</h3>
+          <small>Potencia grega no sueste; logo romana.</small>
+          <p>Porto abrigado; episodio clave co rei Pirro (s. III a.C.).</p>
+        `
+      },
+      {
+        name: "Brundisium (Brindisi)",
+        coords: [40.633, 17.940],
+        html: `
+          <h3>Brundisium (Brindisi)</h3>
+          <small>Final da <i>Via Appia</i>; embarque cara a Grecia.</small>
+          <p>Porta oriental do Mediterráneo romano; tráfico comercial intenso.</p>
+        `
+      },
+
+      // Sicilia
+      {
+        name: "Syrācūsae (Siracusa)",
+        coords: [37.059, 15.293],
+        html: `
+          <h3>Syrācūsae (Siracusa)</h3>
+          <small>Potencia grega; logo provincia romana.</small>
+          <p>Patria de Arquímedes; teatro grego monumental e fortificacións.</p>
+        `
+      },
+      {
+        name: "Aetna (Etna, volcán)",
+        coords: [37.751, 14.993],
+        html: `
+          <h3>Aetna (Etna)</h3>
+          <small>Volcán activo de Sicilia oriental.</small>
+          <p>Referente xeográfico e mitolóxico (xigantes, Hefesto/Vulcano).</p>
+        `
+      },
+      {
+        name: "Catania",
+        coords: [37.507, 15.083],
+        html: `
+          <h3>Catania</h3>
+          <small>A beiras do Etna.</small>
+          <p>Asentamento romano importante; risco volcánico e fértiles solos.</p>
+        `
+      },
+      {
+        name: "Panormus (Palermo)",
+        coords: [38.115, 13.361],
+        html: `
+          <h3>Panormus (Palermo)</h3>
+          <small>Porto amplo (‘pan-ormos’).</small>
+          <p>Intercambio mediterráneo occidental; base naval en épocas distintas.</p>
+        `
+      },
+
+      // Tirreno norte / Centro
+      {
+        name: "Pisae (Pisa)",
+        coords: [43.716, 10.401],
+        html: `
+          <h3>Pisae (Pisa)</h3>
+          <small>Porto tirrénico de Italia central.</small>
+          <p>Tráfico marítimo e relación coas rutas fluviais do Arno.</p>
+        `
+      },
+      {
+        name: "Florentia (Florencia)",
+        coords: [43.769, 11.255],
+        html: `
+          <h3>Florentia (Florencia)</h3>
+          <small>Fundación romana no val do Arno.</small>
+          <p>Desenvolvemento posterior medieval e renacentista sobre base romana.</p>
+        `
+      },
+      {
+        name: "Genua (Xénova)",
+        coords: [44.405, 8.946],
+        html: `
+          <h3>Genua (Xénova)</h3>
+          <small>Porto natural no Golfo de Xénova.</small>
+          <p>Control de cabos e comercio tirrénico setentrional.</p>
+        `
+      }
+    ];
+
+    // Engadir marcadores
+    const markers = L.layerGroup().addTo(map);
+    lugares.forEach(l => L.marker(l.coords, { title: l.name }).addTo(markers).bindPopup(l.html));
+
+    // Control de capas (base + rótulos + marcadores)
+    L.control.layers(
+      { "Satélite Esri": esriImagery },
+      { "Rótulos (Stamen)": labels, "Cidades": markers },
+      { collapsed: true }
+    ).addTo(map);
+
+    // Axustar vista a todas as cidades
+    try {
+      const group = L.featureGroup([markers]);
+      map.fitBounds(group.getBounds().pad(0.15));
+    } catch(e) {}
+
+    // Escala
+    L.control.scale({ metric:true, imperial:false }).addTo(map);
+  </script>
+</body>
+</html>
