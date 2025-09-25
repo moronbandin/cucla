@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="gl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conversor de imaxes (URL/ficheiro → WebP/JPEG/PNG)</title>
+<style>
+  :root{--bg:#f8fafc;--fg:#0f172a;--muted:#64748b;--brand:#16a34a}
+  html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:var(--bg);color:var(--fg)}
+  .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+  h1{font-size:1.35rem;margin:.2rem 0 1rem}
+  .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.06);padding:16px}
+  .grid{display:grid;gap:12px;grid-template-columns:1fr}
+  @media (min-width:920px){.grid{grid-template-columns:1.2fr .8fr}}
+  label{font-size:.9rem;color:var(--muted);display:block;margin-bottom:6px}
+  input[type="text"],input[type="number"],select{
+    width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px;background:#fff
+  }
+  .row{display:flex;gap:10px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand);color:#fff;
+       border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer}
+  .btn.secondary{background:#0ea5e9}
+  .btn.ghost{background:#fff;color:#0f172a;border:1px solid #e5e7eb}
+  .pill{font-size:.8rem;color:#065f46;background:#ecfdf5;border:1px solid #bbf7d0;border-radius:999px;padding:.2rem .6rem}
+  .drop{border:2px dashed #cbd5e1;border-radius:12px;padding:16px;text-align:center;color:#475569;background:#f8fafc}
+  .drop.drag{background:#eff6ff;border-color:#60a5fa}
+  .preview img{max-width:100%;height:auto;border-radius:10px;border:1px solid #e5e7eb}
+  .small{font-size:.85rem;color:#64748b}
+  .mt{margin-top:10px}
+  .mb{margin-bottom:10px}
+  .switch{display:flex;gap:10px;align-items:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Conversor de imaxes (URL ou ficheiro → WebP/JPEG/PNG)</h1>
+
+  <div class="card grid">
+    <div>
+      <div class="mb">
+        <label>URL da imaxe (p.ex. Wikimedia, ou unha web calquera)</label>
+        <div class="row">
+          <input id="url" type="text" placeholder="https://upload.wikimedia.org/.../Exemplo.jpg">
+          <button class="btn ghost" id="btnCargarURL">Cargar URL</button>
+        </div>
+        <div class="small mt">
+          🔒 Se a web non permite CORS, a conversión fallará. Activa o <em>fallback</em> con proxy e reintenta.
+        </div>
+      </div>
+
+      <div class="mb">
+        <label>ou arrastra/solta un ficheiro</label>
+        <div id="drop" class="drop">Solta aquí a imaxe ou <input id="file" type="file" accept="image/*"></div>
+      </div>
+
+      <div class="mb switch">
+        <input type="checkbox" id="chkFallback" checked>
+        <label for="chkFallback" style="margin:0;">Usar proxy se fai falta (fallback)</label>
+      </div>
+      <div class="mb">
+        <label>Base do proxy (por defecto, images.weserv.nl)</label>
+        <input id="proxyBase" type="text" value="https://images.weserv.nl/?url=">
+        <div class="small">Formato esperado: <code>https://images.weserv.nl/?url=</code> + <code>dominio/camiño?query</code> (sen esquema).</div>
+      </div>
+
+      <div class="mb row">
+        <div>
+          <label>Formato de saída</label>
+          <select id="formato">
+            <option value="image/webp">WebP (recomendado)</option>
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/png">PNG</option>
+          </select>
+        </div>
+        <div>
+          <label>Calidade (50–95; PNG ignórase)</label>
+          <input id="calidade" type="number" min="50" max="95" value="75">
+        </div>
+        <div>
+          <label>Lado longo (px)</label>
+          <input id="lado" type="number" min="300" max="4000" value="1600">
+        </div>
+      </div>
+
+      <div class="mb">
+        <label>Nome de saída (sen extensión)</label>
+        <input id="nome" type="text" placeholder="ex.: mapa_italia_fisico">
+      </div>
+
+      <div class="row">
+        <button class="btn" id="btnConverter">Converter & descargar</button>
+        <a id="linkDescarga" class="btn secondary" href="#" download style="display:none">Descargar</a>
+      </div>
+      <div class="small mt">🔎 Mantén proporción, elimina metadatos e reescala ao lado longo indicado.</div>
+    </div>
+
+    <div>
+      <div class="preview">
+        <div>
+          <div class="pill" id="infoSrc" style="display:none"></div>
+          <img id="preview" alt="Previsualización" style="display:none">
+        </div>
+      </div>
+      <div class="small mt" id="infoOut" style="display:none"></div>
+    </div>
+  </div>
+
+  <p class="small mt">
+    ⚠️ Lembra a <strong>atribución/licenza</strong> se a imaxe é de Wikipedia/Commons ou doutros sitios.
+  </p>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const img = new Image();
+img.crossOrigin = "anonymous";
+
+let currentSrc = "";
+let currentIsProxied = false;
+
+function slug(s){
+  return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').slice(0,80) || 'imaxe';
+}
+function nameFromURL(u){
+  try{
+    const p = new URL(u);
+    const seg = p.pathname.split('/').filter(Boolean).pop() || 'imaxe';
+    return slug(seg.replace(/\.[a-zA-Z0-9]+$/, ''));
+  }catch{ return 'imaxe'; }
+}
+function nameFromFile(f){ return slug(f.name.replace(/\.[a-zA-Z0-9]+$/, '')); }
+
+function proxify(u, base){
+  try{
+    const p = new URL(u);
+    const noScheme = (p.host + p.pathname + (p.search || '')).replace(/^\/+/, '');
+    return base + encodeURIComponent(noScheme);
+  }catch{ return u; }
+}
+
+function loadFromURL(u){
+  return new Promise((res, rej)=>{
+    currentSrc = u; currentIsProxied = false;
+    img.onload = ()=>res();
+    img.onerror = ()=>rej(new Error('Non se puido cargar a imaxe (URL inválida/CORS)'));
+    img.src = u + (u.includes('?') ? '&' : '?') + 'cache=' + Date.now();
+  });
+}
+function loadFromURLWithFallback(u){
+  const useFallback = $('#chkFallback').checked;
+  const base = $('#proxyBase').value.trim();
+  return loadFromURL(u).catch(async err=>{
+    if(!useFallback) throw err;
+    const pu = proxify(u, base);
+    return new Promise((res, rej)=>{
+      currentSrc = pu; currentIsProxied = true;
+      img.onload = ()=>res();
+      img.onerror = ()=>rej(new Error('Fallou tamén co proxy'));
+      img.src = pu + (pu.includes('?') ? '&' : '?') + 'cache=' + Date.now();
+    });
+  });
+}
+function loadFromFile(file){
+  return new Promise((res, rej)=>{
+    currentSrc = ""; currentIsProxied = false;
+    const fr = new FileReader();
+    fr.onload = e => { img.onload = ()=>res(); img.src = e.target.result; };
+    fr.onerror = ()=>rej(new Error('Erro lendo o ficheiro'));
+    fr.readAsDataURL(file);
+  });
+}
+
+function drawScaled(canvas, image, longEdge){
+  const ctx = canvas.getContext('2d');
+  const w = image.naturalWidth, h = image.naturalHeight;
+  const ratio = w >= h ? longEdge / w : longEdge / h;
+  const W = Math.round(w * Math.min(1, ratio));
+  const H = Math.round(h * Math.min(1, ratio));
+  canvas.width = W; canvas.height = H;
+  ctx.clearRect(0,0,W,H);
+  ctx.drawImage(image, 0, 0, W, H);
+}
+function isTainted(canvas){
+  try{
+    const ctx = canvas.getContext('2d');
+    ctx.getImageData(0,0,1,1);
+    return false;
+  }catch{ return true; }
+}
+
+async function ensureSafeOrFallback(lado){
+  // Debuxar unha vez e comprobar se o canvas está "tainted"
+  const canvas = document.createElement('canvas');
+  drawScaled(canvas, img, lado);
+  if(!isTainted(canvas)) return {canvas, reloaded:false};
+
+  // Se está tainted e non está proxificado, tentar fallback
+  if(!currentIsProxied && $('#chkFallback').checked && $('#url').value.trim()){
+    const base = $('#proxyBase').value.trim();
+    const pu = proxify($('#url').value.trim(), base);
+    await loadFromURL(pu);
+    const canvas2 = document.createElement('canvas');
+    drawScaled(canvas2, img, lado);
+    if(!isTainted(canvas2)) return {canvas:canvas2, reloaded:true};
+  }
+  return {canvas, reloaded:false};
+}
+
+async function convertAndLink(){
+  if(!img.src){ alert('Carga antes unha imaxe (URL ou ficheiro).'); return; }
+  const formato = $('#formato').value;
+  const cal = Math.max(50, Math.min(95, parseInt($('#calidade').value||'75',10))) / 100;
+  const lado = Math.max(300, Math.min(4000, parseInt($('#lado').value||'1600',10)));
+  let nome = slug($('#nome').value) || (currentSrc ? nameFromURL(currentSrc) : 'imaxe');
+
+  // Asegurar canvas non tainted (fallback se é preciso)
+  const {canvas} = await ensureSafeOrFallback(lado);
+  if(isTainted(canvas)){
+    alert('A orixe non permite CORS e o proxy non funcionou. Descarga a imaxe e súbea como ficheiro.');
+    return;
+  }
+
+  const blob = await new Promise(res => canvas.toBlob(res, formato, (formato==='image/png')?undefined:cal));
+  if(!blob){ alert('Non se puido converter. Proba con outro formato.'); return; }
+
+  const ext = (formato==='image/webp')?'webp':(formato==='image/png'?'png':'jpg');
+  const url = URL.createObjectURL(blob);
+  const a = $('#linkDescarga');
+  a.href = url; a.download = `${nome}.${ext}`; a.style.display = 'inline-flex';
+
+  // Previsualización comprimida
+  const pv = $('#preview'); pv.src = url; pv.style.display = 'block';
+  $('#infoOut').style.display = 'block';
+  $('#infoOut').textContent = `Saída: ${canvas.width}×${canvas.height}px · ${(blob.size/1024).toFixed(1)} KB · ${ext.toUpperCase()}`;
+}
+
+function setInfoSrc(){
+  $('#infoSrc').style.display = 'inline-block';
+  $('#infoSrc').textContent = `Orixe: ${img.naturalWidth}×${img.naturalHeight}px` + (currentIsProxied?' · via proxy':'');
+}
+
+// Eventos
+$('#btnCargarURL').addEventListener('click', async ()=>{
+  const u = $('#url').value.trim();
+  if(!u) return;
+  try{
+    await loadFromURLWithFallback(u);
+    setInfoSrc();
+    $('#nome').value ||= nameFromURL(u);
+    $('#preview').src = img.src; $('#preview').style.display = 'block';
+  }catch(e){ alert(e.message); }
+});
+$('#file').addEventListener('change', async e=>{
+  const f = e.target.files[0]; if(!f) return;
+  await loadFromFile(f);
+  setInfoSrc();
+  $('#nome').value = nameFromFile(f);
+  $('#preview').src = img.src; $('#preview').style.display = 'block';
+});
+const drop = $('#drop');
+drop.addEventListener('dragover', e=>{ e.preventDefault(); drop.classList.add('drag'); });
+drop.addEventListener('dragleave', ()=>drop.classList.remove('drag'));
+drop.addEventListener('drop', async e=>{
+  e.preventDefault(); drop.classList.remove('drag');
+  const f = e.dataTransfer.files[0]; if(!f) return;
+  await loadFromFile(f);
+  setInfoSrc();
+  $('#nome').value = nameFromFile(f);
+  $('#preview').src = img.src; $('#preview').style.display = 'block';
+});
+$('#btnConverter').addEventListener('click', convertAndLink);
+</script>
+</body>
+</html>

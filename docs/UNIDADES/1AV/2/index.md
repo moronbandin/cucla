@@ -8,6 +8,8 @@
 
 ---
 
+[👉 Accede á teoría completa e interactiva](./teoria/index.md){ .md-button .md-button--primary }
+
 ## Para proxectar na aula
 
 - **PDF base:** [Apuntes completos](./materiais/ud2_apuntes.pdf){target=_blank}

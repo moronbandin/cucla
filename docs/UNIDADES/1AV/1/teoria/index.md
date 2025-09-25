@@ -37,7 +37,7 @@ Esta combinación fixo posible a chamada **tríade mediterránea**: trigo, vide 
 !!! example "Mapa interactivo de Grecia"
     <div class="embed video-16x9">
       <iframe 
-          src="../materiais/mapa_grecia_interactivo.html"
+          src="../assets/mapa_grecia_interactivo.html"
           title="Mapa interactivo: Grecia clásica"
           loading="lazy"
           allowfullscreen
@@ -65,7 +65,7 @@ Italia, situada no **corazón do Mediterráneo**, funciona dende a Antigüidade 
 !!! example "Mapa das principais da Italia antiga"
     <div class="embed video-16x9">
       <iframe 
-          src="../materiais/mapa_italia_interactivo.html"
+          src="../assets/mapa_italia_interactivo.html"
           title="Mapa interactivo: Italia antiga"
           loading="lazy"
           allowfullscreen
@@ -86,7 +86,8 @@ Como podemos observar, é unha **longa península en forma de bota** que se prox
 
 ### 3.1. Relevo: cordilleiras e chairas
 
-![Mapa físico de Italia](mapa_fisico.png){.zoom width="65%" .rounded }
+![Mapa físico de Italia](../assets/mapa_fisico.png){.zoom width="65%" .rounded }
+
 
 O relevo italiano está dominado por **dúas grandes cordilleiras**:
 
@@ -105,9 +106,9 @@ Entre estes macizos ábrense chairas de enorme valor agrícola:
 
 ---
 
-### 4.3 Hidrografía: ríos vitais
+### 3.2. Hidrografía: ríos vitais
 
-![Ríos de Italia](image.png){.zoom width="65%" .rounded }
+![Ríos de Italia](../assets/rios_italia.png){.zoom width="65%" .rounded }
 
 Os **ríos italianos**, a diferenza dos gregos, teñen un **curso máis regular e caudaloso**, grazas ás choivas e ao desxeo alpino. Isto fixo posible unha agricultura estable e cidades ben abastecidas.
 
@@ -132,7 +133,7 @@ Os **ríos italianos**, a diferenza dos gregos, teñen un **curso máis regular 
 
 ---
 
-### 4.4 Actividade volcánica: o Vesubio
+### 3.3. Actividade volcánica: o Vesubio
 
 Italia é tamén unha **terra de volcáns**, resultado do choque entre a **placa africana e a euroasiática**.  
 O máis célebre é o **Vesubio**, situado xunto á cidade de Nápoles.
