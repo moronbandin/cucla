@@ -31,20 +31,24 @@ theme:
   logo: assets/logo.svg
   favicon: assets/favicon.png
 
+
+
   # MÁIS FUNCIONALIDADES dispoñibles
   features:
     - navigation.tabs
     - navigation.top
     - navigation.footer
-    - navigation.instant       # navegación instantánea
+    - navigation.instant
+    - navigation.sections        # ← mostra as seccións na sidebar
+    - navigation.indexes         # ← usa index.md como portada da carpeta
+    - navigation.tracking        # ← resalta elemento activo
     - toc.integrate
     - search.suggest
     - search.highlight
-    - content.code.copy        # botón copiar en bloques de código
-    - content.action.edit      # ligazón “Editar esta páxina” (configura repo abaixo)
+    - content.code.copy
+    - content.action.edit
     - content.tabs.link
     - header.autohide
-
 plugins:
   - search
   - tags
@@ -54,6 +58,7 @@ markdown_extensions:
   - admonition
   - footnotes
   - pymdownx.details
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.emoji
   - pymdownx.tasklist
@@ -71,8 +76,11 @@ markdown_extensions:
 # CSS/JS extra para personalizar a tope
 extra_css:
   - styles/extra.css
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css  
 extra_javascript:
   - js/extra.js
+  - https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js
+  - js/zoom-init.js
 
 # Info do repo (para botón “Editar esta páxina” e ligazóns a GitHub)
 repo_url: https://github.com/moronbandin/cucla
@@ -90,17 +98,30 @@ extra:
 nav:
   - Inicio: index.md
   - 1AV:
-      - "UD1 · Xeografía clásica": UNIDADES/1AV/1/index.md
-      - "UD2 · Historia xeral (Grecia→Roma)": UNIDADES/1AV/2/index.md
-      - "UD3 · Mitoloxía e pervivencia": UNIDADES/1AV/3/index.md
-      - "UD4 · Relixión grega e romana": UNIDADES/1AV/4/index.md
+      - "UD1 · Xeografía clásica":
+          - "Portada": UNIDADES/1AV/1/index.md
+          - "Teoría": UNIDADES/1AV/1/teoria/index.md
+      - "UD2 · Historia xeral (Grecia→Roma)":
+          - "Portada": UNIDADES/1AV/2/index.md
+      - "UD3 · Mitoloxía e pervivencia":
+          - "Portada": UNIDADES/1AV/3/index.md
+      - "UD4 · Relixión grega e romana":
+          - "Portada": UNIDADES/1AV/4/index.md
   - 2AV:
-      - "UD5 · Arte grega": UNIDADES/2AV/5/index.md
-      - "UD6 · Arte romana e romanización": UNIDADES/2AV/6/index.md
-      - "UD7 · Sociedade e vida cotiá": UNIDADES/2AV/7/index.md
-      - "UD8 · Política e dereito": UNIDADES/2AV/8/index.md
+      - "UD5 · Arte grega":
+          - "Portada": UNIDADES/2AV/5/index.md
+      - "UD6 · Arte romana e romanización":
+          - "Portada": UNIDADES/2AV/6/index.md
+      - "UD7 · Sociedade e vida cotiá":
+          - "Portada": UNIDADES/2AV/7/index.md
+      - "UD8 · Política e dereito":
+          - "Portada": UNIDADES/2AV/8/index.md
   - 3AV:
-      - "UD9 · Linguas e alfabetos": UNIDADES/3AV/9/index.md
-      - "UD10 · Léxico: latinismos e helenismos": UNIDADES/3AV/10/index.md
-      - "UD11 · Espectáculos e deporte": UNIDADES/3AV/11/index.md
-      - "UD12 · Pervivencia e recepción crítica": UNIDADES/3AV/12/index.md
+      - "UD9 · Linguas e alfabetos":
+          - "Portada": UNIDADES/3AV/9/index.md
+      - "UD10 · Léxico: latinismos e helenismos":
+          - "Portada": UNIDADES/3AV/10/index.md
+      - "UD11 · Espectáculos e deporte":
+          - "Portada": UNIDADES/3AV/11/index.md
+      - "UD12 · Pervivencia e recepción crítica":
+          - "Portada": UNIDADES/3AV/12/index.md
