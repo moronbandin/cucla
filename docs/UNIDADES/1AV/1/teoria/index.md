@@ -95,8 +95,9 @@ O relevo italiano está dominado por **dúas grandes cordilleiras**:
 - **Apeninos**: a **“columna vertebral”** da península, de norte a sur, que divide as vertentes e condiciona as comunicacións, con tramos elevados (**Abruzzos**) e estreitas chairas costeiras (p.ex. **Liguria**).
 
 Entre estes macizos ábrense chairas de enorme valor agrícola:
-- A **chaira padana** (Po), un dos **principais celeiros** do mundo romano.  
-- As chairas de **Campania** (arredor de Nápoles), a **Campagna Romana** (Lacio) e o **Tavoliere** en **Apulia**, que completan as áreas fértiles do centro-sur.
+
+  - A **chaira padana** (Po), un dos **principais celeiros** do mundo romano.  
+  - As chairas de **Campania** (arredor de Nápoles), a **Campagna Romana** (Lacio) e o **Tavoliere** en **Apulia**, que completan as áreas fértiles do centro-sur.
 
 !!! tip "Chaves do relevo e do poboamento"
     - **Pasos alpinos** e **vales fluviais** guiaron rutas, vías e fronteiras.  

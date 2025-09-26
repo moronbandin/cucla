@@ -283,10 +283,10 @@ O latín **non ten artigo**. En galego debemos engadilo **segundo o contexto**:
 
 Indica **Sux. / C.D. / C.I.** en cada oración (en galego normativo):
 
-a) O concerto lles gustou moito.  
-b) Andrés consultou o horario do tren no seu teléfono.  
+a) Gustoulles moito o concerto.  
+b) Andrés consultou o horario do tren no seu teléfono.
 c) Aos estudantes preocúpanlles os exames globais.  
-d) Os responsables entréganos os documentos.  
+d) Os responsábeis entrégannos os documentos.  
 e) O xurado outorgou á película sueca o premio principal.  
 f) O venres hanvos dar as vacacións.
 
@@ -297,20 +297,16 @@ f) O venres hanvos dar as vacacións.
 
 ---
 
-## 2) Complementos do nome (C.N.)
-
-**Subliña** o **C.N.** e indica **a que nome complementa**:
+## 2) **Subliña** o **C.N.** e indica **a que nome complementa**:
 
 a) Iremos á piscina de Xulia.  
 b) O restaurante do teu amigo non é moi elegante.  
 c) Sempre le as novidades de narrativa xuvenil.  
-d) Acompañei a Claudia ata a parada do autobús.
+d) Acompañei Claudia até a parada do autobús.
 
 ---
 
-## 3) Atributo (At.) vs. Complemento Predicativo (C.P.)
-
-Indica se hai **At.** ou **C.P.** e **sublíñao**:
+## 3) Indica se hai **At.** ou **C.P.** e **sublíñao**:
 
 a) O programa é moi aburrido.  
 b) Atopou o seu tío preocupado.  
