@@ -344,8 +344,6 @@ d) As portas permanecerán pechadas todo o día.
 - **aurum** → __________  
 - **foetidum** → __________  
 - **maurum** → __________  
-- **caenum** → __________  
-- **laudāre** → __________  
 - **coenam** → __________
 
 - **amoenum** → __________  
@@ -359,11 +357,11 @@ d) As portas permanecerán pechadas todo o día.
 
 ## 7) Propón un **cultismo** e unha palabra **patrimonial** de cada base:
 
-- **auriculam** → culto: __________ / patrimonial: __________  
-- **faucem** → culto: __________ / patrimonial: __________  
-- **pausāre** → culto: __________ / patrimonial: __________  
-- **laudāre** → culto: __________ / patrimonial: __________  
-- **maurum** → culto: __________ / patrimonial: __________
+- **saeculum** → culto: __________ / patrimonial: __________  
+- **delicatum** → culto: __________ / patrimonial: __________  
+- **oculum** → culto: __________ / patrimonial: __________  
+- **factum** → culto: __________ / patrimonial: __________
+- **pauper** → culto: __________ / patrimonial: __________
 
 ---
 
@@ -371,8 +369,6 @@ d) As portas permanecerán pechadas todo o día.
 
 - **aurum** → ______________________________  
 - **nauta** → ______________________________  
-- **laudāre** → ______________________________  
-- **causa** → ______________________________  
 - **pauperem** → ______________________________
 
 ---
