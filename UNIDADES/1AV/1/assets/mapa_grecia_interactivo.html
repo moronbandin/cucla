@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="gl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa · Grecia clásica (polis, santuarios e batallas)</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin
+  ></script>
+
+  <style>
+    html, body { height:100%; margin:0; }
+    #map { height:100%; width:100%; }
+    .leaflet-popup-content h3 { margin:.2rem 0 .2rem; font-size:16px; }
+    .leaflet-popup-content p { margin:.2rem 0; }
+    .leaflet-popup-content small { color:#555; }
+    .md-btn { display:inline-block; padding:.35rem .6rem; border:1px solid #ccc; border-radius:.4rem; background:#fff; font-size:12px; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    // ----- MAPA -----
+    const map = L.map('map', { zoomControl: true, minZoom: 4, maxZoom: 18 }).setView([39.0, 23.7], 6);
+
+    // ----- CAPAS BASE -----
+    const baseSatEsri = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: 'Imágenes &copy; Esri' }
+    ).addTo(map);
+
+    const basePlanoOSM = L.tileLayer(
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      { maxZoom: 19, attribution: '&copy; OpenStreetMap contribuidores' }
+    );
+
+    const baseRuasEsri = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: '&copy; Esri' }
+    );
+
+    const baseTopoEsri = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: '&copy; Esri' }
+    );
+
+    const baseCartoClaro = L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      { maxZoom: 20, attribution: '&copy; OpenStreetMap &copy; CARTO' }
+    );
+
+    const baseCartoEscuro = L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+      { maxZoom: 20, attribution: '&copy; OpenStreetMap &copy; CARTO' }
+    );
+
+    const baseLayers = {
+      'Satélite (Esri)': baseSatEsri,
+      'Plano (OSM)': basePlanoOSM,
+      'Rúas (Esri)': baseRuasEsri,
+      'Topográfico (Esri)': baseTopoEsri,
+      'Positrón claro (CARTO)': baseCartoClaro,
+      'Escuro (CARTO)': baseCartoEscuro
+    };
+
+    // ----- OVERLAYS OPCIONAIS -----
+    // Rótulos por riba do satélite (límites/lugares)
+    const rotulosEsri = L.tileLayer(
+      'https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, opacity: 0.85, attribution: '&copy; Esri — Rótulos' }
+    ).addTo(map);
+
+    // ----- CAPAS TEMÁTICAS -----
+    const capaPolis = L.layerGroup();
+    const capaSantuarios = L.layerGroup();
+    const capaBatallas = L.layerGroup();
+
+    // Util: crear marcador cun popup
+    function addMarker(layer, coords, title, html) {
+      L.marker(coords, { title }).addTo(layer).bindPopup(html);
+    }
+
+    // ----- POLIS E CAPITAIS -----
+    addMarker(capaPolis, [37.9838, 23.7275], "Atenas",
+      `<h3>Athênai (Atenas)</h3>
+       <small>Ática — Acrópole, Ágora, Pireo</small>
+       <p>Centro da democracia clásica, teatro e filosofía. Potencia naval no s. V a.C.</p>
+       <a class="md-btn" href="https://gl.wikipedia.org/wiki/Atenas" target="_blank" rel="noopener">+ info</a>`);
+
+    addMarker(capaPolis, [37.0755, 22.4297], "Esparta",
+      `<h3>Spártē (Esparta)</h3>
+       <small>Laconia — Eurotas</small>
+       <p>Sociedade militarizada, dualidade de reis, educación espartana. Rival de Atenas.</p>`);
+
+    addMarker(capaPolis, [37.9381, 22.9322], "Corinto",
+      `<h3>Kórinthos (Corinto)</h3>
+       <small>Istmo de Corinto — Diolkos</small>
+       <p>Encrucillada comercial entre Tirreno e Exeo; coloniação e artesanía notable.</p>`);
+
+    addMarker(capaPolis, [38.325, 23.318], "Tebas",
+      `<h3>Thêbai (Tebas)</h3>
+       <small>Beocia</small>
+       <p>Hegemonía no s. IV a.C. con Epaminondas. Mito de Cadmo e Edipo.</p>`);
+
+    addMarker(capaPolis, [40.6401, 22.9444], "Tesalónica",
+      `<h3>Thessaloníkē (Tesalónica)</h3>
+       <small>Macedonia</small>
+       <p>Porto chave do norte Exeo; época helenística e romana salientables.</p>`);
+
+    addMarker(capaPolis, [40.757, 22.524], "Pella",
+      `<h3>Pélla</h3>
+       <small>Capital macedonia</small>
+       <p>Capital de Filipe II e Alexandre Magno; mosaicos e palacio.</p>`);
+
+    addMarker(capaPolis, [37.445, 22.407], "Argos",
+      `<h3>Árgos</h3>
+       <small>Argólida</small>
+       <p>Polis antiga rival de Esparta; herdanza micénica próxima.</p>`);
+
+    addMarker(capaPolis, [35.339, 25.133], "Heraklion (Candía)",
+      `<h3>Hērakleion (Candía)</h3>
+       <small>Creta</small>
+       <p>Porta actual cara a Cnosos; continuidade histórica na illa de Minos.</p>`);
+
+    // ----- SANTUARIOS E SITIOS ARQUEOLÓXICOS -----
+    addMarker(capaSantuarios, [38.482, 22.501], "Delfos",
+      `<h3>Delphoí (Delfos)</h3>
+       <small>Santuario de Apolo — Oráculo</small>
+       <p>Centro relixioso panhelénico e “ombligo do mundo” (ónfalos).</p>`);
+
+    addMarker(capaSantuarios, [37.638, 21.630], "Olimpia",
+      `<h3>Olympía (Olimpia)</h3>
+       <small>Élide — Xogos Olímpicos</small>
+       <p>Santuario de Zeus; competicións atléticas en honra dos deuses.</p>`);
+
+    addMarker(capaSantuarios, [37.730, 22.756], "Epidauro",
+      `<h3>Epidauros (Epidauro)</h3>
+       <small>Asclepio — Teatro</small>
+       <p>Centro de curación; teatro famoso pola acústica impecable.</p>`);
+
+    addMarker(capaSantuarios, [37.730, 22.752], "Teatro de Epidauro",
+      `<h3>Teatro de Epidauro</h3>
+       <small>Arte e arquitectura clásica</small>
+       <p>Modelo de teatro grego; referencia acústica e estética.</p>`);
+
+    addMarker(capaSantuarios, [37.731, 22.75], "Santuario de Asclepio",
+      `<h3>Asklepieion</h3>
+       <small>Saúde e medicina antiga</small>
+       <p>Rituais de incubación; papel social do coidado e a saúde.</p>`);
+
+    addMarker(capaSantuarios, [37.731, 22.75], "Micenas",
+      `<h3>Mykēnai (Micenas)</h3>
+       <small>Porta dos Leóns — tumbas de pozo</small>
+       <p>Centro da civilización micénica (s. XV–XII a.C.), ciclo épico.</p>`);
+
+    addMarker(capaSantuarios, [37.601, 22.793], "Tirinto",
+      `<h3>Tyryns (Tirinto)</h3>
+       <small>Murallas ciclópeas</small>
+       <p>Fortaleza micénica; arquitectura defensiva monumental.</p>`);
+
+    addMarker(capaSantuarios, [35.298, 25.163], "Cnosos (Creta)",
+      `<h3>Knōsos (Cnosos)</h3>
+       <small>Palacio minoico</small>
+       <p>Mito do Labirinto e Minotauro; arte palacial e frescos.</p>`);
+
+    addMarker(capaSantuarios, [36.949, 24.734], "Delos",
+      `<h3>Dēlos (Delos)</h3>
+       <small>Apolo e Artemisa — Liga de Delos</small>
+       <p>Illa sagrada; centro relixioso e político no s. V a.C.</p>`);
+
+    addMarker(capaSantuarios, [37.743, 26.832], "Samos",
+      `<h3>Samos</h3>
+       <small>Heraion — Pitágoras</small>
+       <p>Santuario de Hera; foco cultural e científico.</p>`);
+
+    addMarker(capaSantuarios, [37.039, 27.430], "Mileto (Asia Menor)",
+      `<h3>Mílētos (Mileto)</h3>
+       <small>Xonia — Filosofía presocrática</small>
+       <p>Tales, Anaximandro; plano hipodámico de urbanismo.</p>`);
+
+    addMarker(capaSantuarios, [37.939, 27.341], "Éfeso (Asia Menor)",
+      `<h3>Éphesos (Éfeso)</h3>
+       <small>Ártemis — Porto comercial</small>
+       <p>Grandes ruínas romanas; biblioteca de Celso, teatro.</p>`);
+
+    addMarker(capaSantuarios, [39.119, 26.555], "Mitilene (Lesbos)",
+      `<h3>Mytilēnē (Mitilene)</h3>
+       <small>Lesbos — Safo</small>
+       <p>Poesía lírica; redes comerciais no Exeo setentrional.</p>`);
+
+    // ----- BATALLAS / PASOS -----
+    addMarker(capaBatallas, [38.153, 23.972], "Maratón",
+      `<h3>Marathṓn (Maratón)</h3>
+       <small>490 a.C. — Guerras Médicas</small>
+       <p>Victoria ateniense sobre os persas. Mito do corredor.</p>`);
+
+    addMarker(capaBatallas, [37.968, 23.575], "Salamina",
+      `<h3>Salamís (Salamina)</h3>
+       <small>480 a.C. — Batalla naval</small>
+       <p>Decisiva vitoria grega ante a frota persa de Xerxes.</p>`);
+
+    addMarker(capaBatallas, [38.796, 22.536], "Termópilas",
+      `<h3>Thermopylai (Termópilas)</h3>
+       <small>480 a.C. — Paso estratéxico</small>
+       <p>Resistencia espartana de Leónidas fronte aos persas.</p>`);
+
+    // --- ENGADIR CAPAS AO MAPA ---
+    capaPolis.addTo(map);
+    capaSantuarios.addTo(map);
+    capaBatallas.addTo(map);
+
+    const overlays = {
+      'Rótulos (sobre satélite)': rotulosEsri,
+      'Polis e capitais': capaPolis,
+      'Santuarios e sitios': capaSantuarios,
+      'Batallas e pasos': capaBatallas
+    };
+
+    // Control de capas (bases + overlays)
+    L.control.layers(baseLayers, overlays, { collapsed: true }).addTo(map);
+
+    // Axustar vista a todo o conxunto
+    try {
+      // Recoller todos os marcadores das tres capas
+      const allLayers = L.featureGroup([
+        ...capaPolis.getLayers(),
+        ...capaSantuarios.getLayers(),
+        ...capaBatallas.getLayers()
+      ]);
+      map.fitBounds(allLayers.getBounds().pad(0.15));
+    } catch(e) {}
+
+    // Escala
+    L.control.scale({ metric: true, imperial: false }).addTo(map);
+  </script>
+</body>
+</html>
