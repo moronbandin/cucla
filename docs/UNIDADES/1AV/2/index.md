@@ -279,21 +279,24 @@ O latín **non ten artigo**. En galego debemos engadilo **segundo o contexto**:
 
 # Actividades · Tema 3 (Introdución á lingua latina)
 
-## 1) Identifica funcións: Suxeito (Sux.), C.D. e C.I.
-
-Indica **Sux. / C.D. / C.I.** en cada oración (en galego normativo):
+## 1) Indica **Sux. / C.D. / C.I.** en cada oración:
 
 a) Gustoulles moito o concerto.  
+
 b) Andrés consultou o horario do tren no seu teléfono.
+
 c) Aos estudantes preocúpanlles os exames globais.  
+
 d) Os responsábeis entrégannos os documentos.  
+
 e) O xurado outorgou á película sueca o premio principal.  
+
 f) O venres hanvos dar as vacacións.
 
 > 🔎 Lembra:  
 > — Sux.: concorda co verbo.  
-> — C.D.: cousa/persoa sobre a que recae a acción (en galego pode ir con “a” ante nome de persoa).  
-> — C.I.: destinatario/beneficiario (en galego adoita ir con “a” / “para”).
+> — C.D.: cousa/persoa sobre a que recae a acción (en galego/portugués o CD de persoa non leva prep. “a”).  
+> — C.I.: destinatario/beneficiario (en gl/pt e esp. adoita ir con “a” / “para”).
 
 ---
 
