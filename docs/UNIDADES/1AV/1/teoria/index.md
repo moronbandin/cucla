@@ -91,8 +91,8 @@ Como podemos observar, é unha **longa península en forma de bota** que se prox
 
 O relevo italiano está dominado por **dúas grandes cordilleiras**:
 
-- **Alpes**: ao norte, forman un **arco protector** que illaba de Europa central e fornecía **auga** (neves e glaciares) aos grandes ríos do norte (Po, Adigio, Ticino…).  
-- **Apeninos**: a **“columna vertebral”** da península, de norte a sur, que divide as vertentes e condiciona as comunicacións, con tramos elevados (**Abruzzos**) e estreitas chairas costeiras (p.ex. **Liguria**).
+  - **Alpes**: ao norte, forman un **arco protector** que illaba de Europa central e fornecía **auga** (neves e glaciares) aos grandes ríos do norte (Po, Ádixe, Ticino…).  
+  - **Apeninos**: a **“columna vertebral”** da península, de norte a sur, que divide as vertentes e condiciona as comunicacións, con tramos elevados (**Abruzzos**) e estreitas chairas costeiras (p.ex. **Liguria**).
 
 Entre estes macizos ábrense chairas de enorme valor agrícola:
 
