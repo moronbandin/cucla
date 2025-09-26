@@ -276,3 +276,117 @@ O latín **non ten artigo**. En galego debemos engadilo **segundo o contexto**:
 | **Ablativo** | **puella** | **puellis** |
 
 > 📌 **Lembra**: caso ≠ función “única”. Cada caso pode cumprir **varias funcións** segundo o **contexto** e as **preposicións** que leve.
+
+# Actividades · Tema 3 (Introdución á lingua latina)
+
+## 1) Identifica funcións: Suxeito (Sux.), C.D. e C.I.
+
+Indica **Sux. / C.D. / C.I.** en cada oración (en galego normativo):
+
+a) O concerto lles gustou moito.  
+b) Andrés consultou o horario do tren no seu teléfono.  
+c) Aos estudantes preocúpanlles os exames globais.  
+d) Os responsables entréganos os documentos.  
+e) O xurado outorgou á película sueca o premio principal.  
+f) O venres hanvos dar as vacacións.
+
+> 🔎 Lembra:  
+> — Sux.: concorda co verbo.  
+> — C.D.: cousa/persoa sobre a que recae a acción (en galego pode ir con “a” ante nome de persoa).  
+> — C.I.: destinatario/beneficiario (en galego adoita ir con “a” / “para”).
+
+---
+
+## 2) Complementos do nome (C.N.)
+
+**Subliña** o **C.N.** e indica **a que nome complementa**:
+
+a) Iremos á piscina de Xulia.  
+b) O restaurante do teu amigo non é moi elegante.  
+c) Sempre le as novidades de narrativa xuvenil.  
+d) Acompañei a Claudia ata a parada do autobús.
+
+---
+
+## 3) Atributo (At.) vs. Complemento Predicativo (C.P.)
+
+Indica se hai **At.** ou **C.P.** e **sublíñao**:
+
+a) O programa é moi aburrido.  
+b) Atopou o seu tío preocupado.  
+c) A túa veciña está enfadada.  
+d) As portas permanecerán pechadas todo o día.
+
+---
+
+### Cuestións de gramática latina (responde brevemente)
+
+- ☞ **En que caso vai en latín a función de suxeito?** → _____________  
+- ☞ **En que concordan suxeito e verbo?** → _____________  
+- ☞ **En que caso vai en latín a función de C.D.?** → _____________  
+- ☞ **E a de C.I.?** → _____________  
+- ☞ **En que casos se expresa en latín a función de predicativo?**  
+  – Do suxeito: normalmente en __________.  
+  – Do C.D.: normalmente __________ (predicativo do obxecto).  
+- ☞ **E a función de atributo?** → ________________ (con verbos copulativos).  
+- ☞ **En que caso se expresa o C.N. (complemento do nome)?** → __________________________.
+
+---
+
+## 6) Aplica as regras vistas (**ae → e**, **oe → e**, **au → ou**):
+
+- **aedificāre** → __________  
+- **foederāre** → __________  
+- **aedilem** → __________  
+- **Oedipum** → __________  
+- **Caecilium** → __________  
+- **foedum** → __________
+
+- **aurum** → __________  
+- **foetidum** → __________  
+- **maurum** → __________  
+- **caenum** → __________  
+- **laudāre** → __________  
+- **coenam** → __________
+
+- **amoenum** → __________  
+- **Caesarem** → __________  
+- **thesaurum** → __________  
+- **aerarium** → __________  
+- **autumnum** → __________  
+- **coenobium** → __________
+
+---
+
+## 7) Propón un **cultismo** e unha palabra **patrimonial** de cada base:
+
+- **auriculam** → culto: __________ / patrimonial: __________  
+- **faucem** → culto: __________ / patrimonial: __________  
+- **pausāre** → culto: __________ / patrimonial: __________  
+- **laudāre** → culto: __________ / patrimonial: __________  
+- **maurum** → culto: __________ / patrimonial: __________
+
+---
+
+## 8) Forma palabras conservando a raíz latina
+
+- **aurum** → ______________________________  
+- **nauta** → ______________________________  
+- **laudāre** → ______________________________  
+- **causa** → ______________________________  
+- **pauperem** → ______________________________
+
+---
+
+## 9) Latinismos: completa as frases
+
+1) Para que te contraten debes presentar o teu ____________________________.  
+2) O médico receitoulle ____________________________ ao falso enfermo.  
+3) Cando o fillo se emancipa, os pais perden a ____________________________.  
+4) O fútbol e os espectáculos de impacto son o ____________________________ da actualidade.  
+5) O ordenador non é malo ____________________________, pero depende do uso.  
+6) Chegou o momento do exame: ____________________________.  
+7) O ____________________________ ten unha grande responsabilidade na crianza.  
+8) Pontevedra declarou ____________________________ ao presidente do goberno.  
+9) A renda ____________________________ española está por baixo da europea.  
+10) Semella que teremos a este director ____________________________.
