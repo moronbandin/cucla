@@ -128,6 +128,8 @@ A palabra **_puella_** (“nena”) adopta distintas terminacións segundo a fun
 
 ### Exemplos (singular)
 
+[Repaso de sintaxe básica.](https://lenguanorba.wordpress.com/wp-content/uploads/2012/10/2-repaso-de-sintaxis_la-oracic3b3n-simple1.pdf)
+
 | Función | Galego | Latín |
 |---|---|---|
 | **Suxeito** | *A nena é fermosa* | **puella** pulchra est |
