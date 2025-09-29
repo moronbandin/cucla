@@ -10,20 +10,35 @@
 
 ## 1. Grecia
 
-A **civilización grega** desenvolveuse nun espazo de **polis** (cidades-estado) e expandiuse polo Mediterráneo mediante a **colonización**. A cultura grega marcou para sempre a política, a arte e o pensamento de Europa.
+A **civilización grega** desenvolveuse nun espazo fragmentado en pequenas **polis** (cidades-estado). Cada polis tiña o seu territorio, as súas institucións e a súa divindade protectora. Grecia non foi nunca un Estado unificado, senón unha constelación de comunidades independentes. A expansión polo Mediterráneo mediante a **colonización** (séculos VIII–VI a.C.) permitiu estender a cultura grega a moitas rexións, desde Asia Menor ata a Magna Grecia en Italia.  
+A cultura grega marcou para sempre a política, a arte e o pensamento de Europa.
+
+---
 
 ### 1.1 Etapas históricas (visión xeral)
 
-```mermaid
-timeline
-    title Etapas da historia grega
-    2000-1400 a.C. : Civilización minoica (Creta) — palacios (Cnosos), comercio mariño
-    1600-1100 a.C. : Cultura micénica (continente) — cidadelas (Micenas, Tirinto), elites guerreiras
-    1100-800 a.C.  : Idade escura — retroceso demográfico e cultural
-    800-500 a.C.   : Período arcaico — nacemento das polis, colonización, alfabetización
-    500-323 a.C.   : Período clásico — Guerras Médicas, hegemonías Atenas/Esparta, Peloponeso
-    323-31 a.C.    : Período helenístico — reinos tras Alexandre, mestizaxe cultural
-```
+A historia grega pódese dividir en seis grandes períodos.  
+
+<div style="display:flex;flex-direction:column;gap:14px;padding:12px 0;border-left:4px solid #444;margin:20px 0;">
+  <div style="padding-left:12px;">
+    <strong>2000–1400 a.C.</strong> — Civilización minoica (Creta): palacios como Cnosos, economía palacial e comercio mariño.
+  </div>
+  <div style="padding-left:12px;">
+    <strong>1600–1100 a.C.</strong> — Cultura micénica (continente): cidadelas como Micenas ou Tirinto, elites guerreiras e armas de bronce.
+  </div>
+  <div style="padding-left:12px;">
+    <strong>1100–800 a.C.</strong> — Idade escura: retroceso demográfico, desaparición da escritura e crise económica.
+  </div>
+  <div style="padding-left:12px;">
+    <strong>800–500 a.C.</strong> — Período arcaico: nacemento das polis, colonización mediterránea e aparición do alfabeto grego.
+  </div>
+  <div style="padding-left:12px;">
+    <strong>500–323 a.C.</strong> — Período clásico: Guerras Médicas, rivalidade Atenas–Esparta, esplendor cultural e Guerra do Peloponeso.
+  </div>
+  <div style="padding-left:12px;">
+    <strong>323–31 a.C.</strong> — Período helenístico: tras Alexandre Magno, difusión da cultura grega nos grandes reinos helenísticos.
+  </div>
+</div>
 
 !!! example "Mapa interactivo · Polis e colonización (placeholder)"
     <div class="embed video-16x9">
@@ -36,40 +51,89 @@ timeline
     </div>
     <small>📌 Sube/usa un HTML Leaflet con polis clave (Atenas, Esparta, Corinto…), santuarios (Delfos, Olimpia, Epidauro) e batallas (Maratón, Salamina, Termópilas).</small>
 
+---
+
 ### 1.2 Do mundo palacial á polis
 
-![Cnosos, palacio minoico (placeholder)](../assets/minoica_cnosos.webp){.zoom width="65%" .rounded }
-![Porta dos Leóns, Micenas (placeholder)](../assets/micenas_porta_leons.webp){.zoom width="65%" .rounded }
+![Cnosos, palacio minoico](../assets/cnossos.webp){.zoom width="65%" .rounded }
+![Porta dos Leóns, Micenas (placeholder)](../assets/porta-leons.webp){.zoom width="65%" .rounded }
 
-- **Minoica (Creta)**: palacios como **Cnosos**, economía palacial e comercio marítimo.
-- **Micénica**: fortalezas (**Micenas**, **Tirinto**), armas de bronce, elites guerreiras.
-- Tras a **Idade escura**, xorden as **polis** (Atenas, Esparta, Tebas…) con institucións propias.
+- **Civilización minoica (Creta)**:  
+    - Desenvolveuse na illa de **Creta** entre os anos 2000–1400 a.C.  
+    - Organizábase arredor de grandes **palacios** (Cnosos, Festos, Malia), que eran á vez centros políticos, económicos e relixiosos.  
+    - Destacan os **frescos policromos** con escenas naturais e mariñas, que mostran unha sociedade refinada e aberta ao mar.  
+    - Utilizaban a **escritura [lineal A](https://pt.wikipedia.org/wiki/Linear_A)**, aínda non descifrada.  
+    - A súa economía baseábase no **comercio marítimo**, polo que Creta converteuse nunha potencia naval do Exeo.  
+    - Relixión de carácter **naturalista** e **feminino**: cultos á deusa nai, ao touro (mito do Minotauro).  
+
+- **Cultura micénica (continente)**:  
+    - Desenvolveuse no continente grego (1600–1100 a.C.), en cidades como **Micenas**, **Tirinto** ou **Pilos**.  
+    - Tiña unha sociedade **xerárquica e guerreira**, dirixida por reis (wanax) apoiados por unha aristocracia militar.  
+    - Construíron **cidadelas fortificadas** e **tumbas monumentais** (tholos, como a “tumba de Atreo”).  
+    - Desenvolveron unha **escritura propia, o [lineal B](https://pt.wikipedia.org/wiki/Linear_B)**, que xa foi descifrada e que representa unha forma arcaica do grego.  
+    - A súa cultura militar reflíctese nos poemas homéricos (*Ilíada*, *Odisea*), que transmiten ecos dun pasado heroico.  
+
+- **Tras a Idade Escura (1100–800 a.C.)**:  
+    - Con as invasións dóricas e a caída do mundo micénico produciuse un **retroceso demográfico, económico e cultural**: desapareceu a escritura, reduciuse o comercio e as aldeas quedaron illadas.  
+    - A partir do século VIII a.C. houbo unha recuperación:  
+        - Reaparece a **escritura** mediante a adaptación do **alfabeto fenicio**, que deu lugar ao grego.  
+        - Fórmanse as **polis**, comunidades políticas independentes cun núcleo urbano e un territorio agrícola arredor.  
+        - Nace un **novo sistema social** baseado na cidadanía, na participación política (aínda limitada a homes libres) e no concepto de comunidade.  
+
+---
 
 !!! info "Institucións e sociedade"
-    - **Polis**: cidadanía masculina, asemblea, maxistraturas.
-    - **Economía**: tríade mediterránea, artesanía, comercio marítimo.
-    - **Colonización** (s. VIII–VI a.C.): novas polis polo Exeo, Mar Negro e occidente (*Magna Grecia*).
+    - **A polis**:  
+        - Era a comunidade política fundamental en Grecia.  
+        - Combinaba un **espazo urbano** (asty) cun **espazo rural** (chora).  
+        - Os cidadáns homes libres participaban na **asemblea** e elixían ou ocupaban as **maxistraturas**.  
+        - Había tamén non-cidadáns: mulleres, metecos (estranxeiros residentes) e escravos.  
+
+    - **Economía**:  
+        - Agricultura da **tríade mediterránea** (trigo, vide, oliveira).  
+        - **Artesanía especializada** (cerámica, metalurxia, tecidos).  
+        - **Comercio marítimo**, facilitado pola xeografía grega de illas e costas recortadas.  
+
+    - **Colonización (s. VIII–VI a.C.)**:  
+        - As polis, ante o aumento de poboación e a escaseza de terras, fundaron novas cidades ao longo do **Mediterráneo e Mar Negro**.  
+        - Creáronse polis na costa de Asia Menor, no sur de Italia e Sicilia (*Magna Grecia*), en Galia, Exipto ou Cirene (Libia).  
+        - A colonización permitiu difundir a lingua, a relixión e as formas políticas gregas, creando un **espazo cultural común**.  
+
 
 ??? tip "Vídeo: A polis grega en 5' (placeholder)"
     <div class="embed video-16x9">
-      <iframe src="https://www.youtube.com/embed/ID_VIDEO_POLIS"
-              title="A polis grega"
-              loading="lazy" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/IaV4rNo_OS8?si=FJv3XGfNqditzGVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-### 1.3 O clásico: Atenas, Esparta e as guerras
+---
+
+### 1.3 O período clásico: Atenas, Esparta e as guerras
 
 ![Acrópole de Atenas (placeholder)](../assets/atenas_acropole.webp){.zoom width="65%" .rounded }
 
-- **Guerras Médicas** (s. V a.C.): resistencia grega fronte a Persia (Maratón, Salamina).
-- **Hegemonía ateniense**: democracia, teatro, filosofía.
-- **Guerra do Peloponeso**: rivalidade **Atenas–Esparta** → desgaste xeral.
+O período clásico é o máis coñecido da historia grega.  
+
+- **Guerras Médicas (490–479 a.C.)**: as polis gregas, encabezadas por Atenas e Esparta, resisten ás invasións persas. Batallas célebres: **Maratón**, **Termópilas**, **Salamina**.  
+- **Esplendor ateniense**: baixo **Pericles**, Atenas vive unha etapa de democracia, desenvolvemento cultural (teatro, filosofía) e monumentalidade (Partenón).  
+- **Guerra do Peloponeso (431–404 a.C.)**: rivalidade entre Atenas (potencia naval, democrática) e Esparta (potencia terrestre, militarista). O enfrontamento leva ao desgaste de todas as polis gregas.  
+
+---
 
 ### 1.4 O mundo helenístico
 
 ![Alexandre e reinos helenísticos (placeholder)](../assets/mapa_helenistico.webp){.zoom width="65%" .rounded }
 
-Tras **Alexandre Magno**, o mundo grego esténdese a Exipto e Asia. Nacen grandes **reinos helenísticos** (Ptolomeos, Seléucidas, Antigónidas): **mestizaxe cultural** e difusión do grego (*koiné*).
+- **Alexandre Magno (356–323 a.C.)**: rei de Macedonia que conquistou Grecia, Exipto e Asia ata a India.  
+- Tras a súa morte, o imperio fragmentouse en tres grandes reinos:  
+  - **Ptolomeos en Exipto**,  
+  - **Seléucidas en Asia**,  
+  - **Antigónidas en Macedonia**.  
+- Prodúcese unha intensa **mestizaxe cultural** entre Grecia e Oriente.  
+- A lingua grega común (**koiné**) difúndese como lingua internacional do Mediterráneo oriental.  
+- A cultura helenística destaca en:  
+  - **Arte**: máis expresiva e realista.  
+  - **Ciencia**: Euclides, Arquímedes, Hiparco.  
+  - **Filosofía**: estoicismo, epicureísmo, escepticismo.  
 
 ---
 
