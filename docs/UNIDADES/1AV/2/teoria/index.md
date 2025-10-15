@@ -65,12 +65,16 @@ A historia grega pódese dividir en seis grandes períodos.
     - A súa economía baseábase no **comercio marítimo**, polo que Creta converteuse nunha potencia naval do Exeo.  
     - Relixión de carácter **naturalista** e **feminino**: cultos á deusa nai, ao touro (mito do Minotauro).  
 
+![Civilización minoica](https://i.pinimg.com/736x/1d/89/77/1d8977607774fb80650bfc127cb16411.jpg)
+
 - **Cultura micénica (continente)**:  
     - Desenvolveuse no continente grego (1600–1100 a.n.e.), en cidades como **Micenas**, **Tirinto** ou **Pilos**.  
     - Tiña unha sociedade **xerárquica e guerreira**, dirixida por reis (wanax) apoiados por unha aristocracia militar.  
     - Construíron **cidadelas fortificadas** e **tumbas monumentais** (tholos, como a “tumba de Atreo”).  
     - Desenvolveron unha **escritura propia, o [lineal B](https://pt.wikipedia.org/wiki/Linear_B)**, que xa foi descifrada e que representa unha forma arcaica do grego.  
     - A súa cultura militar reflíctese nos poemas homéricos (*Ilíada*, *Odisea*), que transmiten ecos dun pasado heroico.  
+
+![Micenas](https://media.baamboozle.com/uploads/images/758387/1652083271_17530.png)
 
 - **Tras a Idade Escura (1100–800 a.n.e.)**:  
     - Con as invasións dóricas e a caída do mundo micénico produciuse un **retroceso demográfico, económico e cultural**: desapareceu a escritura, reduciuse o comercio e as aldeas quedaron illadas.  
