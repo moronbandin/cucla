@@ -1,5 +1,6 @@
 site_name: Cultura Clásica
 site_url: https://moronbandin.github.io/cucla/
+site_favicon: favicon.png
 
 theme:
   name: material
