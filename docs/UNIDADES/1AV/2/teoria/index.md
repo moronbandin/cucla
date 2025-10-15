@@ -21,22 +21,22 @@ A historia grega pódese dividir en seis grandes períodos.
 
 <div style="display:flex;flex-direction:column;gap:14px;padding:12px 0;border-left:4px solid #444;margin:20px 0;">
   <div style="padding-left:12px;">
-    <strong>2000–1400 a.C.</strong> — Civilización minoica (Creta): palacios como Cnosos, economía palacial e comercio mariño.
+    <strong>2000–1400 a.n.e.</strong> — Civilización minoica (Creta): palacios como Cnosos, economía palacial e comercio mariño.
   </div>
   <div style="padding-left:12px;">
-    <strong>1600–1100 a.C.</strong> — Cultura micénica (continente): cidadelas como Micenas ou Tirinto, elites guerreiras e armas de bronce.
+    <strong>1600–1100 a.n.e.</strong> — Cultura micénica (continente): cidadelas como Micenas ou Tirinto, elites guerreiras e armas de bronce.
   </div>
   <div style="padding-left:12px;">
-    <strong>1100–800 a.C.</strong> — Idade escura: retroceso demográfico, desaparición da escritura e crise económica.
+    <strong>1100–800 a.n.e.</strong> — Idade escura: retroceso demográfico, desaparición da escritura e crise económica.
   </div>
   <div style="padding-left:12px;">
-    <strong>800–500 a.C.</strong> — Período arcaico: nacemento das polis, colonización mediterránea e aparición do alfabeto grego.
+    <strong>800–500 a.n.e.</strong> — Período arcaico: nacemento das polis, colonización mediterránea e aparición do alfabeto grego.
   </div>
   <div style="padding-left:12px;">
-    <strong>500–323 a.C.</strong> — Período clásico: Guerras Médicas, rivalidade Atenas–Esparta, esplendor cultural e Guerra do Peloponeso.
+    <strong>500–323 a.n.e.</strong> — Período clásico: Guerras Médicas, rivalidade Atenas–Esparta, esplendor cultural e Guerra do Peloponeso.
   </div>
   <div style="padding-left:12px;">
-    <strong>323–31 a.C.</strong> — Período helenístico: tras Alexandre Magno, difusión da cultura grega nos grandes reinos helenísticos.
+    <strong>323–31 a.n.e.</strong> — Período helenístico: tras Alexandre Magno, difusión da cultura grega nos grandes reinos helenísticos.
   </div>
 </div>
 
