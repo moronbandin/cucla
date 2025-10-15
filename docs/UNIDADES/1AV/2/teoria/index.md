@@ -10,7 +10,7 @@
 
 ## 1. Grecia
 
-A **civilización grega** desenvolveuse nun espazo fragmentado en pequenas **polis** (cidades-estado). Cada polis tiña o seu territorio, as súas institucións e a súa divindade protectora. Grecia non foi nunca un Estado unificado, senón unha constelación de comunidades independentes. A expansión polo Mediterráneo mediante a **colonización** (séculos VIII–VI a.C.) permitiu estender a cultura grega a moitas rexións, desde Asia Menor ata a Magna Grecia en Italia.  
+A **civilización grega** desenvolveuse nun espazo fragmentado en pequenas **polis** (cidades-estado). Cada polis tiña o seu territorio, as súas institucións e a súa divindade protectora. Grecia non foi nunca un Estado unificado, senón unha constelación de comunidades independentes. A expansión polo Mediterráneo mediante a **colonización** (séculos VIII–VI a.n.e.) permitiu estender a cultura grega a moitas rexións, desde Asia Menor ata a Magna Grecia en Italia.  
 A cultura grega marcou para sempre a política, a arte e o pensamento de Europa.
 
 ---
@@ -58,7 +58,7 @@ A historia grega pódese dividir en seis grandes períodos.
 ![Porta dos Leóns, Micenas (placeholder)](../assets/porta-leons.webp){.zoom width="65%" .rounded }
 
 - **Civilización minoica (Creta)**:  
-    - Desenvolveuse na illa de **Creta** entre os anos 2000–1400 a.C.  
+    - Desenvolveuse na illa de **Creta** entre os anos 2000–1400 a.n.e.  
     - Organizábase arredor de grandes **palacios** (Cnosos, Festos, Malia), que eran á vez centros políticos, económicos e relixiosos.  
     - Destacan os **frescos policromos** con escenas naturais e mariñas, que mostran unha sociedade refinada e aberta ao mar.  
     - Utilizaban a **escritura [lineal A](https://pt.wikipedia.org/wiki/Linear_A)**, aínda non descifrada.  
@@ -66,15 +66,15 @@ A historia grega pódese dividir en seis grandes períodos.
     - Relixión de carácter **naturalista** e **feminino**: cultos á deusa nai, ao touro (mito do Minotauro).  
 
 - **Cultura micénica (continente)**:  
-    - Desenvolveuse no continente grego (1600–1100 a.C.), en cidades como **Micenas**, **Tirinto** ou **Pilos**.  
+    - Desenvolveuse no continente grego (1600–1100 a.n.e.), en cidades como **Micenas**, **Tirinto** ou **Pilos**.  
     - Tiña unha sociedade **xerárquica e guerreira**, dirixida por reis (wanax) apoiados por unha aristocracia militar.  
     - Construíron **cidadelas fortificadas** e **tumbas monumentais** (tholos, como a “tumba de Atreo”).  
     - Desenvolveron unha **escritura propia, o [lineal B](https://pt.wikipedia.org/wiki/Linear_B)**, que xa foi descifrada e que representa unha forma arcaica do grego.  
     - A súa cultura militar reflíctese nos poemas homéricos (*Ilíada*, *Odisea*), que transmiten ecos dun pasado heroico.  
 
-- **Tras a Idade Escura (1100–800 a.C.)**:  
+- **Tras a Idade Escura (1100–800 a.n.e.)**:  
     - Con as invasións dóricas e a caída do mundo micénico produciuse un **retroceso demográfico, económico e cultural**: desapareceu a escritura, reduciuse o comercio e as aldeas quedaron illadas.  
-    - A partir do século VIII a.C. houbo unha recuperación:  
+    - A partir do século VIII a.n.e. houbo unha recuperación:  
         - Reaparece a **escritura** mediante a adaptación do **alfabeto fenicio**, que deu lugar ao grego.  
         - Fórmanse as **polis**, comunidades políticas independentes cun núcleo urbano e un territorio agrícola arredor.  
         - Nace un **novo sistema social** baseado na cidadanía, na participación política (aínda limitada a homes libres) e no concepto de comunidade.  
@@ -93,7 +93,7 @@ A historia grega pódese dividir en seis grandes períodos.
         - **Artesanía especializada** (cerámica, metalurxia, tecidos).  
         - **Comercio marítimo**, facilitado pola xeografía grega de illas e costas recortadas.  
 
-    - **Colonización (s. VIII–VI a.C.)**:  
+    - **Colonización (s. VIII–VI a.n.e.)**:  
         - As polis, ante o aumento de poboación e a escaseza de terras, fundaron novas cidades ao longo do **Mediterráneo e Mar Negro**.  
         - Creáronse polis na costa de Asia Menor, no sur de Italia e Sicilia (*Magna Grecia*), en Galia, Exipto ou Cirene (Libia).  
         - A colonización permitiu difundir a lingua, a relixión e as formas políticas gregas, creando un **espazo cultural común**.  
@@ -110,17 +110,17 @@ A historia grega pódese dividir en seis grandes períodos.
 
 ![Acrópole de Atenas](../assets/atenas-acropole.webp){.zoom width="65%" .rounded }
 
-O chamado **período clásico** (séculos V–IV a.C.) é a etapa de maior esplendor da civilización grega e o momento en que se consolidan moitas das bases políticas, artísticas e intelectuais que influíron na cultura europea posterior.
+O chamado **período clásico** (séculos V–IV a.n.e.) é a etapa de maior esplendor da civilización grega e o momento en que se consolidan moitas das bases políticas, artísticas e intelectuais que influíron na cultura europea posterior.
 
 ---
 
-#### As Guerras Médicas (490–479 a.C.)
+#### As Guerras Médicas (490–479 a.n.e.)
 
-Durante o século V a.C., o Imperio Persa intentou someter as polis gregas. A resistencia foi liderada principalmente por **Atenas** e **Esparta**:
+Durante o século V a.n.e., o Imperio Persa intentou someter as polis gregas. A resistencia foi liderada principalmente por **Atenas** e **Esparta**:
 
-* En **Maratón (490 a.C.)**, os atenienses derrotaron sorprendentemente ao exército persa.
-* En **Termópilas (480 a.C.)**, un pequeno grupo de espartanos, encabezados polo rei **Leónidas**, resistiu heroicamente fronte a un inimigo inmensamente superior.
-* En **Salamina (480 a.C.)**, a frota ateniense obtivo unha vitoria naval decisiva.
+* En **Maratón (490 a.n.e.)**, os atenienses derrotaron sorprendentemente ao exército persa.
+* En **Termópilas (480 a.n.e.)**, un pequeno grupo de espartanos, encabezados polo rei **Leónidas**, resistiu heroicamente fronte a un inimigo inmensamente superior.
+* En **Salamina (480 a.n.e.)**, a frota ateniense obtivo unha vitoria naval decisiva.
 
 Estas batallas convertéronse en símbolos da identidade grega e da defensa da liberdade fronte á tiranía.
 
@@ -130,7 +130,7 @@ Estas batallas convertéronse en símbolos da identidade grega e da defensa da l
 
 Logo das Guerras Médicas, Atenas asumiu a hexemonía mediante a **Liga de Delos**, unha alianza militar que se converteu nun auténtico imperio mariñeiro.
 
-Baixo o liderado de **Pericles** (mediados do século V a.C.):
+Baixo o liderado de **Pericles** (mediados do século V a.n.e.):
 
 * Consolidouse a **democracia ateniense**, cunha participación cidadá directa nas asembleas.
 * Viviu un gran **esplendor cultural**, con autores como **Esquilo, Sófocles e Eurípides** no teatro, **Heródoto** e **Tucídides** na historiografía, **Sócrates** na filosofía.
@@ -140,13 +140,13 @@ Atenas converteuse así no faro cultural de Grecia, aínda que a súa hexemonía
 
 ---
 
-#### A Guerra do Peloponeso (431–404 a.C.)
+#### A Guerra do Peloponeso (431–404 a.n.e.)
 
 A rivalidade entre **Atenas** (potencia naval, democrática e imperialista) e **Esparta** (potencia terrestre, de carácter militarista e oligárquico) desembocou nun longo conflito que dividiu ás polis en dous bandos: a **Liga de Delos** e a **Liga do Peloponeso**.
 
 A guerra prolongouse case tres décadas, con fases de tregua e reanudacións, epidemias como a que matou a Pericles, e intervencións exteriores (Persia apoiou finalmente a Esparta).
 
-O resultado foi a **derrota de Atenas** no 404 a.C. e a breve hexemonía espartana. Con todo, o desgaste xeral debilitou ás polis gregas, facilitando a súa posterior conquista por Macedonia.
+O resultado foi a **derrota de Atenas** no 404 a.n.e. e a breve hexemonía espartana. Con todo, o desgaste xeral debilitou ás polis gregas, facilitando a súa posterior conquista por Macedonia.
 
 ---
 
@@ -165,11 +165,11 @@ O período clásico grego combina:
 
 ![Mapa do mundo helenístico](../assets/mapa-helenistico.webp){.zoom width="65%" .rounded }
 
-O **mundo helenístico** abrangue o período entre a morte de **Alexandre Magno** (323 a.C.) e a conquista romana de Exipto (31 a.C.). Foi unha etapa de transformación na que a cultura grega se difundiu por vastos territorios e se mesturou coas tradicións orientais.
+O **mundo helenístico** abrangue o período entre a morte de **Alexandre Magno** (323 a.n.e.) e a conquista romana de Exipto (31 a.n.e.). Foi unha etapa de transformación na que a cultura grega se difundiu por vastos territorios e se mesturou coas tradicións orientais.
 
 ---
 
-#### Alexandre Magno (356–323 a.C.)
+#### Alexandre Magno (356–323 a.n.e.)
 
 * Rei de **Macedonia**, educado por **Aristóteles**.
 * Unificou Grecia e lanzou unha campaña militar que conquistou:
@@ -179,7 +179,7 @@ O **mundo helenístico** abrangue o período entre a morte de **Alexandre Magno*
     * Mesopotamia e Persia,
     * chegando ata o val do Indo.
 
-* O seu proxecto de imperio universal rematou coa súa morte prematura en **Babilonia (323 a.C.)**.
+* O seu proxecto de imperio universal rematou coa súa morte prematura en **Babilonia (323 a.n.e.)**.
 
 ---
 
@@ -231,9 +231,9 @@ O período caracterízase por avances notables en diversos campos:
 ### 2.1 Etapas históricas (visión xeral)
 
 **Secuencia básica (sen mermaid):**
-- **753–509 a.C. · Monarquía** (tradición e influencias etruscas).
-- **509–27 a.C. · República** → Senado, maxistraturas; expansión e **Guerras Púnicas**.
-- **27 a.C.–235 d.C. · Principado** (de **Augusto** a Severos) → **Pax Romana**.
+- **753–509 a.n.e. · Monarquía** (tradición e influencias etruscas).
+- **509–27 a.n.e. · República** → Senado, maxistraturas; expansión e **Guerras Púnicas**.
+- **27 a.n.e.–235 d.C. · Principado** (de **Augusto** a Severos) → **Pax Romana**.
 - **235–284 d.C. · Crise do século III**.
 - **284–476 d.C. · Dominado**; reformas de Diocleciano/Constantino; **476**: caída de Occidente (pervive Oriente).
 
@@ -257,7 +257,7 @@ O período caracterízase por avances notables en diversos campos:
 
 ![Augusto de Prima Porta (placeholder)](../assets/augusto_prima_porta.webp){.zoom width="65%" .rounded }
 
-- **Augusto (27 a.C.)**: inicio do **Principado**; **Pax Romana** (s. I–II d.C.).
+- **Augusto (27 a.n.e.)**: inicio do **Principado**; **Pax Romana** (s. I–II d.C.).
 - **Século III**: crises militares/económicas; reformas de **Diocleciano** e **Constantino**.
 - **División (395)** e **476 d.C.**: caída de Occidente (o Oriente bizantino continúa).
 
@@ -275,12 +275,12 @@ O período caracterízase por avances notables en diversos campos:
 !!! example "Táboa sincrónica (séculos e fitos)"
     | Século | Grecia | Roma |
     |---:|---|---|
-    | **VIII a.C.** | Polis arcaicas; colonización | Fundación lendaria (753 a.C.); monarquía |
-    | **VI a.C.** | Reformas en Atenas (Solón/Clístenes) | Fin da monarquía; **República** (509 a.C.) |
-    | **V a.C.** | **Guerras Médicas**; Peloponeso | Conquista de Italia central |
-    | **IV a.C.** | **Alexandre**; helenismo | Guerras samnitas; Italia |
-    | **III–II a.C.** | Reinos helenísticos | **Guerras Púnicas**; dominio mediterráneo |
-    | **I a.C.** | Integración en órbita romana | Crises; **Augusto** (27 a.C.) |
+    | **VIII a.n.e.** | Polis arcaicas; colonización | Fundación lendaria (753 a.n.e.); monarquía |
+    | **VI a.n.e.** | Reformas en Atenas (Solón/Clístenes) | Fin da monarquía; **República** (509 a.n.e.) |
+    | **V a.n.e.** | **Guerras Médicas**; Peloponeso | Conquista de Italia central |
+    | **IV a.n.e.** | **Alexandre**; helenismo | Guerras samnitas; Italia |
+    | **III–II a.n.e.** | Reinos helenísticos | **Guerras Púnicas**; dominio mediterráneo |
+    | **I a.n.e.** | Integración en órbita romana | Crises; **Augusto** (27 a.n.e.) |
     | **I–II d.C.** | Cultura helenística viva | **Pax Romana**; apoxeo |
     | **III–V d.C.** | — | Crise; división; **476 d.C.** |
 
@@ -326,20 +326,20 @@ Roma **admira e integra** Grecia: relixión, arte, pensamento, educación…
 
 1️⃣ **Liña do tempo de Grecia**  
 ??? example "Ordea os fitos — solución posible"
-    1. Civilización minoica (c. 2000–1400 a.C.)  
-    2. Cultura micénica (c. 1600–1100 a.C.)  
-    3. Idade escura (c. 1100–800 a.C.)  
-    4. Período arcaico (c. 800–500 a.C.)  
-    5. Período clásico (c. 500–323 a.C.)  
-    6. Período helenístico (323–31 a.C.)
+    1. Civilización minoica (c. 2000–1400 a.n.e.)  
+    2. Cultura micénica (c. 1600–1100 a.n.e.)  
+    3. Idade escura (c. 1100–800 a.n.e.)  
+    4. Período arcaico (c. 800–500 a.n.e.)  
+    5. Período clásico (c. 500–323 a.n.e.)  
+    6. Período helenístico (323–31 a.n.e.)
 
 2️⃣ **Liña do tempo de Roma**  
 ??? example "Fitos principais — solución posible"
-    1. Fundación lendaria (753 a.C.) → Monarquía  
-    2. República (509 a.C.)  
-    3. Guerras púnicas (264–146 a.C.)  
-    4. Ditadura de César (49–44 a.C.)  
-    5. Imperio con Augusto (27 a.C.)  
+    1. Fundación lendaria (753 a.n.e.) → Monarquía  
+    2. República (509 a.n.e.)  
+    3. Guerras púnicas (264–146 a.n.e.)  
+    4. Ditadura de César (49–44 a.n.e.)  
+    5. Imperio con Augusto (27 a.n.e.)  
     6. Pax Romana (s. I–II d.C.)  
     7. Crise do s. III → Reformas  
     8. División (395) → 476 (Occidente)
