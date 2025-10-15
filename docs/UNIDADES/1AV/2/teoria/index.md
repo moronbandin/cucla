@@ -49,7 +49,6 @@ A historia grega pódese dividir en seis grandes períodos.
           allowfullscreen
           style="border:0;"></iframe>
     </div>
-    <small>📌 Sube/usa un HTML Leaflet con polis clave (Atenas, Esparta, Corinto…), santuarios (Delfos, Olimpia, Epidauro) e batallas (Maratón, Salamina, Termópilas).</small>
 
 ---
 
@@ -109,31 +108,119 @@ A historia grega pódese dividir en seis grandes períodos.
 
 ### 1.3 O período clásico: Atenas, Esparta e as guerras
 
-![Acrópole de Atenas (placeholder)](../assets/atenas_acropole.webp){.zoom width="65%" .rounded }
+![Acrópole de Atenas](../assets/atenas-acropole.webp){.zoom width="65%" .rounded }
 
-O período clásico é o máis coñecido da historia grega.  
+O chamado **período clásico** (séculos V–IV a.C.) é a etapa de maior esplendor da civilización grega e o momento en que se consolidan moitas das bases políticas, artísticas e intelectuais que influíron na cultura europea posterior.
 
-- **Guerras Médicas (490–479 a.C.)**: as polis gregas, encabezadas por Atenas e Esparta, resisten ás invasións persas. Batallas célebres: **Maratón**, **Termópilas**, **Salamina**.  
-- **Esplendor ateniense**: baixo **Pericles**, Atenas vive unha etapa de democracia, desenvolvemento cultural (teatro, filosofía) e monumentalidade (Partenón).  
-- **Guerra do Peloponeso (431–404 a.C.)**: rivalidade entre Atenas (potencia naval, democrática) e Esparta (potencia terrestre, militarista). O enfrontamento leva ao desgaste de todas as polis gregas.  
+---
+
+#### As Guerras Médicas (490–479 a.C.)
+
+Durante o século V a.C., o Imperio Persa intentou someter as polis gregas. A resistencia foi liderada principalmente por **Atenas** e **Esparta**:
+
+* En **Maratón (490 a.C.)**, os atenienses derrotaron sorprendentemente ao exército persa.
+* En **Termópilas (480 a.C.)**, un pequeno grupo de espartanos, encabezados polo rei **Leónidas**, resistiu heroicamente fronte a un inimigo inmensamente superior.
+* En **Salamina (480 a.C.)**, a frota ateniense obtivo unha vitoria naval decisiva.
+
+Estas batallas convertéronse en símbolos da identidade grega e da defensa da liberdade fronte á tiranía.
+
+---
+
+#### O esplendor de Atenas
+
+Logo das Guerras Médicas, Atenas asumiu a hexemonía mediante a **Liga de Delos**, unha alianza militar que se converteu nun auténtico imperio mariñeiro.
+
+Baixo o liderado de **Pericles** (mediados do século V a.C.):
+
+* Consolidouse a **democracia ateniense**, cunha participación cidadá directa nas asembleas.
+* Viviu un gran **esplendor cultural**, con autores como **Esquilo, Sófocles e Eurípides** no teatro, **Heródoto** e **Tucídides** na historiografía, **Sócrates** na filosofía.
+* A **Acrópole** foi monumentalizada con edificios como o **Partenón**, símbolo da arte clásica e da confianza no ser humano.
+
+Atenas converteuse así no faro cultural de Grecia, aínda que a súa hexemonía xerou recelos noutras polis.
+
+---
+
+#### A Guerra do Peloponeso (431–404 a.C.)
+
+A rivalidade entre **Atenas** (potencia naval, democrática e imperialista) e **Esparta** (potencia terrestre, de carácter militarista e oligárquico) desembocou nun longo conflito que dividiu ás polis en dous bandos: a **Liga de Delos** e a **Liga do Peloponeso**.
+
+A guerra prolongouse case tres décadas, con fases de tregua e reanudacións, epidemias como a que matou a Pericles, e intervencións exteriores (Persia apoiou finalmente a Esparta).
+
+O resultado foi a **derrota de Atenas** no 404 a.C. e a breve hexemonía espartana. Con todo, o desgaste xeral debilitou ás polis gregas, facilitando a súa posterior conquista por Macedonia.
+
+---
+
+#### Balance do período clásico
+
+O período clásico grego combina:
+
+* **Esplendor cultural e político**, que deu lugar á democracia, a filosofía e as grandes obras de arte.
+* **Conflitos internos**, que minaron a unidade helénica e deixaron Grecia vulnerable.
+
+É unha etapa brillante e contraditoria: ao tempo que se formulaban os principios da liberdade cidadá, as guerras fratricidas impedían a consolidación dunha unidade política duradeira.
 
 ---
 
 ### 1.4 O mundo helenístico
 
-![Alexandre e reinos helenísticos (placeholder)](../assets/mapa_helenistico.webp){.zoom width="65%" .rounded }
+![Mapa do mundo helenístico](../assets/mapa-helenistico.webp){.zoom width="65%" .rounded }
 
-- **Alexandre Magno (356–323 a.C.)**: rei de Macedonia que conquistou Grecia, Exipto e Asia ata a India.  
-- Tras a súa morte, o imperio fragmentouse en tres grandes reinos:  
-  - **Ptolomeos en Exipto**,  
-  - **Seléucidas en Asia**,  
-  - **Antigónidas en Macedonia**.  
-- Prodúcese unha intensa **mestizaxe cultural** entre Grecia e Oriente.  
-- A lingua grega común (**koiné**) difúndese como lingua internacional do Mediterráneo oriental.  
-- A cultura helenística destaca en:  
-  - **Arte**: máis expresiva e realista.  
-  - **Ciencia**: Euclides, Arquímedes, Hiparco.  
-  - **Filosofía**: estoicismo, epicureísmo, escepticismo.  
+O **mundo helenístico** abrangue o período entre a morte de **Alexandre Magno** (323 a.C.) e a conquista romana de Exipto (31 a.C.). Foi unha etapa de transformación na que a cultura grega se difundiu por vastos territorios e se mesturou coas tradicións orientais.
+
+---
+
+#### Alexandre Magno (356–323 a.C.)
+
+* Rei de **Macedonia**, educado por **Aristóteles**.
+* Unificou Grecia e lanzou unha campaña militar que conquistou:
+
+    * Asia Menor,
+    * Exipto (onde fundou **Alexandría**),
+    * Mesopotamia e Persia,
+    * chegando ata o val do Indo.
+
+* O seu proxecto de imperio universal rematou coa súa morte prematura en **Babilonia (323 a.C.)**.
+
+---
+
+#### Os reinos helenísticos
+
+Tras a morte de Alexandre, o imperio fragmentouse en varios estados gobernados polos seus xenerais (**diádocos**). Os máis importantes foron:
+
+* **Ptolomeos en Exipto**: dinastía que fixo de Alexandría un centro cultural coa súa famosa **biblioteca**.
+* **Seléucidas en Asia**: dominaban Siria, Mesopotamia e parte de Persia.
+* **Antigónidas en Macedonia e Grecia**: continuaban a tradición helénica no ámbito máis próximo.
+
+---
+
+#### A mestizaxe cultural
+
+* Xorde unha intensa **mestura entre Grecia e Oriente**, tanto en relixión, costumes como en arte.
+* A lingua grega común, a **koiné**, converteuse na lingua internacional de comunicación no Mediterráneo oriental.
+* As cidades fundadas por Alexandre e polos seus sucesores foron focos de comercio e cultura, con poboacións diversas.
+
+---
+
+#### A cultura helenística
+
+O período caracterízase por avances notables en diversos campos:
+
+* **Arte**:
+
+    * Máis expresiva e realista que no clasicismo.
+    * Exemplos célebres: a **Venus de Milo**, o **Laocoonte**.
+
+* **Ciencia**:
+
+    * **Euclides** (matemáticas e xeometría).
+    * **Arquímedes** (mecánica, enxeñaría).
+    * **Hiparco** (astronomía).
+
+* **Filosofía**:
+
+    * **Estoicismo** (Zenón de Citio): vivir segundo a razón e a natureza.
+    * **Epicureísmo** (Epicuro): busca da felicidade a través da moderación e a amizade.
+    * **Escepticismo** (Pirro): imposibilidade de alcanzar certezas absolutas.  
 
 ---
 
@@ -159,7 +246,6 @@ O período clásico é o máis coñecido da historia grega.
           allowfullscreen
           style="border:0;"></iframe>
     </div>
-    <small>📌 Sube/usa un HTML Leaflet cunha liña temporal de expansión (Italia, Púnicas, Oriente, provincias).</small>
 
 ### 2.2 República: institucións e expansión
 

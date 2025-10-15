@@ -10,7 +10,7 @@
 
 [👉 Accede á teoría completa e interactiva](./teoria/index.md){ .md-button .md-button--primary }
 
-## Para proxectar na aula
+<!-- ## Para proxectar na aula
 
 - **PDF base:** [Apuntes completos](./materiais/ud2_apuntes.pdf){target=_blank}
 - **Esquema cronolóxico:** ![](./materiais/esquema_cronoloxia.jpg){.rounded}
@@ -99,4 +99,4 @@ Cada texto inclúe:
 > 🕰️ *Esta unidade axuda o alumnado a situar grandes procesos históricos no tempo e a ver como a cultura grega alimentou a romana, creando unha herdanza común que chega ata nós.*  
 
 
---- 
+---  -->
