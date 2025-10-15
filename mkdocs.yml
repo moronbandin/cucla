@@ -1,10 +1,13 @@
 site_name: Cultura Clásica
 site_url: https://moronbandin.github.io/cucla/
-site_favicon: favicon.png
+site_favicon: docs/assets/favicon.png
 
 theme:
   name: material
   language: gl
+  logo: docs/assets/favicon.png
+  favicon: docs/assets/favicon.png
+
 
   # CORES (modo claro/escuro con conmutador)
   palette:
@@ -108,27 +111,27 @@ nav:
       - "UD1 · Xeografía clásica":
           - "Portada": UNIDADES/1AV/1/index.md
           - "Teoría": UNIDADES/1AV/1/teoria/index.md
-      - "UD2 · Historia xeral (Grecia→Roma)":
+      - "UD2 · Historia xeral":
           - "Portada": UNIDADES/1AV/2/index.md
       - "UD3 · Mitoloxía e pervivencia":
           - "Portada": UNIDADES/1AV/3/index.md
       - "UD4 · Relixión grega e romana":
           - "Portada": UNIDADES/1AV/4/index.md
-  - 2AV:
-      - "UD5 · Arte grega":
-          - "Portada": UNIDADES/2AV/5/index.md
-      - "UD6 · Arte romana e romanización":
-          - "Portada": UNIDADES/2AV/6/index.md
-      - "UD7 · Sociedade e vida cotiá":
-          - "Portada": UNIDADES/2AV/7/index.md
-      - "UD8 · Política e dereito":
-          - "Portada": UNIDADES/2AV/8/index.md
-  - 3AV:
-      - "UD9 · Linguas e alfabetos":
-          - "Portada": UNIDADES/3AV/9/index.md
-      - "UD10 · Léxico: latinismos e helenismos":
-          - "Portada": UNIDADES/3AV/10/index.md
-      - "UD11 · Espectáculos e deporte":
-          - "Portada": UNIDADES/3AV/11/index.md
-      - "UD12 · Pervivencia e recepción crítica":
-          - "Portada": UNIDADES/3AV/12/index.md
+  # - 2AV:
+  #     - "UD5 · Arte grega":
+  #         - "Portada": UNIDADES/2AV/5/index.md
+  #     - "UD6 · Arte romana e romanización":
+  #         - "Portada": UNIDADES/2AV/6/index.md
+  #     - "UD7 · Sociedade e vida cotiá":
+  #         - "Portada": UNIDADES/2AV/7/index.md
+  #     - "UD8 · Política e dereito":
+  #         - "Portada": UNIDADES/2AV/8/index.md
+  # - 3AV:
+  #     - "UD9 · Linguas e alfabetos":
+  #         - "Portada": UNIDADES/3AV/9/index.md
+  #     - "UD10 · Léxico: latinismos e helenismos":
+  #         - "Portada": UNIDADES/3AV/10/index.md
+  #     - "UD11 · Espectáculos e deporte":
+  #         - "Portada": UNIDADES/3AV/11/index.md
+  #     - "UD12 · Pervivencia e recepción crítica":
+  #         - "Portada": UNIDADES/3AV/12/index.md

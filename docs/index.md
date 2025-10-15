@@ -9,26 +9,40 @@ hide:
 
 > Aprendemos Grecia e Roma con ollada crítica, rigor e creatividade.
 
+## :material-lightbulb-on: Accesos rápidos
+
 <div class="grid cards" markdown>
 
 -   :material-map: **1ª Avaliación**
     
-    **UD1** Xeografía clásica · **UD2** Historia xeral · **UD3** Mitoloxía e pervivencia · **UD4** Relixión.
+    [**UD1** Xeografía clásica](UNIDADES/1AV/1/index.md)
     
-    [:octicons-arrow-right-24: Entrar »](UNIDADES/1AV/1/index.md)
-
+    [**UD2** Historia xeral](UNIDADES/1AV/2/index.md)
+    
+    [**UD3** Mitoloxía e pervivencia](UNIDADES/1AV/3/index.md)
+    
+    [**UD4** Relixión](UNIDADES/1AV/4/index.md)
+    
 -   :material-bank: **2ª Avaliación**
     
-    **UD5** Arte grega · **UD6** Arte romana e romanización · **UD7** Sociedade e vida · **UD8** Política e dereito.
+    [**UD5** · Arte grega](UNIDADES/2AV/5/index.md)  
     
-    [:octicons-arrow-right-24: Entrar »](UNIDADES/2AV/5/index.md)
-
+    [**UD6** · Arte romana e romanización](UNIDADES/2AV/6/index.md)  
+    
+    [**UD7** · Sociedade e vida cotiá](UNIDADES/2AV/7/index.md)  
+    
+    [**UD8** · Política e dereito](UNIDADES/2AV/8/index.md)
+    
 -   :material-alphabet-greek: **3ª Avaliación**
     
-    **UD9** Linguas e alfabetos · **UD10** Latinismos e helenismos · **UD11** Espectáculos e deporte · **UD12** Recepción crítica.
+    [**UD9** · Linguas e alfabetos](UNIDADES/3AV/9/index.md)  
     
-    [:octicons-arrow-right-24: Entrar »](UNIDADES/3AV/9/index.md)
-
+    [**UD10** · Latinismos e helenismos](UNIDADES/3AV/10/index.md)  
+    
+    [**UD11** · Espectáculos e deporte](UNIDADES/3AV/11/index.md)  
+    
+    [**UD12** · Pervivencia e recepción crítica](UNIDADES/3AV/12/index.md)
+    
 </div>
 
 ---
@@ -44,38 +58,6 @@ hide:
     - Emprega a **barra superior** para navegar por trimestre → UD.
     - Usa a busca (:material-magnify:) para atopar termos, autores ou conceptos.
     - Para **imprimir** unha páxina: menú do navegador → *Imprimir* (ou `⌘/Ctrl+P`).
-
----
-
-## :material-lightbulb-on: Accesos rápidos
-
-<div class="grid cards" markdown>
-
--   :material-map-outline: **UD1 · Xeografía clásica**
-
-    Mapas físicos e políticos, rutas e recursos.
-    
-    [:octicons-arrow-right-24: Ir á UD »](UNIDADES/1AV/1/index.md)
-
--   :material-timeline-clock: **UD2 · Historia xeral (Grecia→Roma)**
-    
-    Liña do tempo con 10 fitos clave.
-    
-    [:octicons-arrow-right-24: Ir á UD »](UNIDADES/1AV/2/index.md)
-
--   :material-sword-cross: **UD3 · Mitoloxía e pervivencia**
-    
-    Panteón, mitos nucleares e usos hoxe.
-    
-    [:octicons-arrow-right-24: Ir á UD »](UNIDADES/1AV/3/index.md)
-
--   :material-bank: **UD4 · Relixión grega e romana**
-    
-    Ritos, espazos sagrados, calendarios.
-    
-    [:octicons-arrow-right-24: Ir á UD »](UNIDADES/1AV/4/index.md)
-
-</div>
 
 ---
 
