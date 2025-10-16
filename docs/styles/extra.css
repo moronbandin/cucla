@@ -182,3 +182,86 @@
   .uppercase { text-transform: uppercase; }
   
   
+
+
+/* Táboas modernas e suaves */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.modern-table thead {
+  background: var(--md-primary-fg-color--light);
+}
+.modern-table th {
+  color: var(--md-primary-bg-color);
+  font-weight: 700;
+  text-align: left;
+  padding: .75rem 1rem;
+  font-size: 1rem;
+}
+.modern-table td {
+  padding: .75rem 1rem;
+  vertical-align: top;
+}
+.modern-table tbody tr:nth-child(odd) {
+  background: var(--md-default-bg-color--light);
+}
+.modern-table tbody tr:hover {
+  background: var(--md-primary-fg-color--lightest);
+  transition: background 0.2s ease;
+}
+.modern-table ul {
+  margin: 0.25rem 0;
+  padding-left: 1.2rem;
+}
+
+/* === Liña do tempo vertical === */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 3px solid var(--md-primary-fg-color);
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  /* --- o segredo está aquí --- */
+  left: -0.5px;                     /* lixeiro desprazamento cara a dentro */
+  top: 0.55rem;
+  width: 10px;
+  height: 10px;
+  background: var(--md-primary-fg-color);
+  border-radius: 50%;
+  transform: translateX(-50%);      /* centra o punto exactamente no eixo da liña */
+}
+
+.tl-year {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.25rem;
+}
+
+.tl-content {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.2rem;
+  }
+  .tl-item {
+    padding-left: 0.8rem;
+  }
+}

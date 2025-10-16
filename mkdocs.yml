@@ -5,7 +5,6 @@ site_favicon: docs/assets/favicon.png
 theme:
   name: material
   language: gl
-  logo: docs/assets/favicon.png
   favicon: docs/assets/favicon.png
 
 
@@ -113,10 +112,13 @@ nav:
           - "Teoría": UNIDADES/1AV/1/teoria/index.md
       - "UD2 · Historia xeral":
           - "Portada": UNIDADES/1AV/2/index.md
+          - "Teoría": UNIDADES/1AV/2/teoria/index.md
       - "UD3 · Mitoloxía e pervivencia":
           - "Portada": UNIDADES/1AV/3/index.md
+          - "Teoría": UNIDADES/1AV/3/teoria/index.md
       - "UD4 · Relixión grega e romana":
           - "Portada": UNIDADES/1AV/4/index.md
+          - "Teoría": UNIDADES/1AV/4/teoria/index.md
   # - 2AV:
   #     - "UD5 · Arte grega":
   #         - "Portada": UNIDADES/2AV/5/index.md

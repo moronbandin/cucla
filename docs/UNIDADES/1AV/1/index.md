@@ -10,16 +10,6 @@
 
 [👉 Accede á teoría completa e interactiva](./teoria/index.md){ .md-button .md-button--primary }
 
-## Recursos imprimibles
-
-- **Ficha para o alumnado:** [PDF](./materiais/ficha_alumnado.pdf)
-- **Mapas mudos en alta calidade:**
-  - [Mediterráneo xeral](./materiais/mapa_mediterraneo.pdf)
-  - [Grecia físico/político](./materiais/mapa_grecia.pdf)
-  - [Italia físico/político](./materiais/mapa_italia.pdf)
-
----
-
 ## Textos para comentar
 
 - [Homero, *Ilíada* (canto XIV, adapt.)](../textos/homero_ilida.md)

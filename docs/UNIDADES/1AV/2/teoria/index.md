@@ -169,214 +169,279 @@ O período clásico grego combina:
 
 ![Mapa do mundo helenístico](../assets/mapa-helenistico.webp){.zoom width="65%" .rounded }
 
-O **mundo helenístico** abrangue o período entre a morte de **Alexandre Magno** (323 a.n.e.) e a conquista romana de Exipto (31 a.n.e.). Foi unha etapa de transformación na que a cultura grega se difundiu por vastos territorios e se mesturou coas tradicións orientais.
+O chamado **mundo helenístico** abrangue o período que vai **da morte de Alexandre Magno (323 a.n.e.) ata a conquista romana de Exipto (31 a.n.e.)**, cando **Grecia e o Oriente mediterráneo** pasan a formar parte do poder romano.  
+É unha etapa de transición: **Grecia deixa de ser un conxunto de polis independentes** e convértese no corazón cultural dun mundo moito máis amplo, no que a lingua e as ideas gregas se mesturan con tradicións orientais.
 
 ---
 
-#### Alexandre Magno (356–323 a.n.e.)
+#### De Grecia a Macedonia
 
-* Rei de **Macedonia**, educado por **Aristóteles**.
-* Unificou Grecia e lanzou unha campaña militar que conquistou:
+Despois das guerras entre polis, **Macedonia**, un reino do norte grego, impúxose baixo **Filipo II**, que unificou militarmente Grecia tras a batalla de Queronea (338 a.n.e.).  
+O seu fillo, **Alexandre Magno (356–323 a.n.e.)**, educado por **Aristóteles**, levou esa unidade máis alá: emprendeu unha conquista sen precedentes que cambiou para sempre o mapa político e cultural do mundo antigo.
 
-    * Asia Menor,
-    * Exipto (onde fundou **Alexandría**),
-    * Mesopotamia e Persia,
-    * chegando ata o val do Indo.
+---
 
-* O seu proxecto de imperio universal rematou coa súa morte prematura en **Babilonia (323 a.n.e.)**.
+#### Alexandre Magno e o seu imperio
+
+* Entre 334 e 323 a.n.e., Alexandre conquistou:
+    * **Asia Menor**,  
+    * **Exipto** (onde fundou **Alexandría**),  
+    * **Mesopotamia e [Persia](../textos/persia.md)**,  
+    * chegando ata o val do **Indo**.  
+
+O seu obxectivo non era só militar: quería **fusionar Oriente e Occidente** nun único imperio.  
+Por iso promoveu matrimonios mixtos, adoptou costumes persas e fundou **decenas de cidades chamadas Alexandría**, que serviron de núcleos de comercio e cultura.  
+Morreu prematuramente en **Babilonia (323 a.n.e.)**, sen sucesor claro: o seu enorme imperio fragmentouse axiña.
 
 ---
 
 #### Os reinos helenísticos
 
-Tras a morte de Alexandre, o imperio fragmentouse en varios estados gobernados polos seus xenerais (**diádocos**). Os máis importantes foron:
+Despois da súa morte, os seus xenerais —os **diádocos**— repartíronse o territorio, creando varios reinos independentes, pero todos de lingua e cultura gregas.  
+Os máis importantes foron:
 
-* **Ptolomeos en Exipto**: dinastía que fixo de Alexandría un centro cultural coa súa famosa **biblioteca**.
-* **Seléucidas en Asia**: dominaban Siria, Mesopotamia e parte de Persia.
-* **Antigónidas en Macedonia e Grecia**: continuaban a tradición helénica no ámbito máis próximo.
+* **Reino ptolemaico de Exipto** → dinastía dos **Ptolomeos**, que fixeron de **Alexandría** un centro intelectual de primeira orde coa súa famosa **biblioteca** e o **Museo**.  
+* **Reino seléucida** → abarcaba Siria, Mesopotamia e parte de Persia, con cidades gregas fundadas sobre antigas capitais orientais.  
+* **Reino antigónida** → en **Macedonia e Grecia**, mantivo a tradición política helénica e controlou as polis do Exeo.
+
+Estes reinos conservaron o grego como lingua oficial, fomentaron o comercio e o intercambio cultural, e impulsaron a ciencia e as artes baixo o mecenado dos reis.
 
 ---
 
 #### A mestizaxe cultural
 
-* Xorde unha intensa **mestura entre Grecia e Oriente**, tanto en relixión, costumes como en arte.
-* A lingua grega común, a **koiné**, converteuse na lingua internacional de comunicación no Mediterráneo oriental.
-* As cidades fundadas por Alexandre e polos seus sucesores foron focos de comercio e cultura, con poboacións diversas.
+O termo **helenístico** vén de “helenizar”: **estender o grego (ἑλληνικόν) máis alá de Grecia**.  
+A cultura grega fundiuse coas tradicións orientais, dando lugar a un mundo cosmopolita e urbano.  
+As principais características foron:
+
+- A lingua **koiné**, unha forma común do grego, converteuse na lingua internacional do Mediterráneo oriental.  
+- As novas cidades (Alexandría, Antioquía, Pérgamo, etc.) foron centros de comercio, ciencia e arte.  
+- O **contacto entre pobos** deu lugar a unha visión máis aberta e universal do ser humano.
 
 ---
 
 #### A cultura helenística
 
-O período caracterízase por avances notables en diversos campos:
+<table class="modern-table">
+  <thead>
+    <tr>
+      <th style="width: 25%;">Campo</th>
+      <th>Avances e figuras destacadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="twemoji">🎨</span> <strong>Arte</strong></td>
+      <td>
+        <ul>
+          <li>Máis expresiva e realista ca no clasicismo, con movemento e emoción.</li>
+          <li>Exemplos célebres: a <strong>Venus de Milo</strong> e o <strong>Laocoonte</strong>.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="twemoji">🔬</span> <strong>Ciencia</strong></td>
+      <td>
+        <ul>
+          <li><strong>Euclides</strong> – sistematizou a xeometría.</li>
+          <li><strong>Arquímedes</strong> – estudou as leis da mecánica e da hidrostática.</li>
+          <li><strong>Hiparco</strong> – elaborou táboas astronómicas e anticipou o sistema de coordenadas celestes.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="twemoji">💭</span> <strong>Filosofía</strong></td>
+      <td>
+        <ul>
+          <li><strong>Estoicismo</strong> (Zenón de Citio): vivir conforme á razón e á natureza, aceptando o destino.</li>
+          <li><strong>Epicureísmo</strong> (Epicuro): procurar a felicidade mediante a amizade e a moderación.</li>
+          <li><strong>Escepticismo</strong> (Pirro): dúbida ante a posibilidade de coñecemento absoluto.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-* **Arte**:
+---
 
-    * Máis expresiva e realista que no clasicismo.
-    * Exemplos célebres: a **Venus de Milo**, o **Laocoonte**.
+#### O final do mundo helenístico
 
-* **Ciencia**:
+Durante os séculos III e II a.n.e., os reinos helenísticos **debilitáronse por loitas internas** e pola crecente influencia de **Roma**, que foi conquistando progresivamente o Mediterráneo oriental:
 
-    * **Euclides** (matemáticas e xeometría).
-    * **Arquímedes** (mecánica, enxeñaría).
-    * **Hiparco** (astronomía).
+- **Macedonia** converteuse en provincia romana en **148 a.n.e.**  
+- **Grecia** foi sometida definitivamente tras a destrución de **Corinto (146 a.n.e.)**.  
+- **Asia Menor** e o **reino seléucida** foron anexados no século II a.n.e.  
+- Finalmente, **Exipto** foi incorporado por Roma en **31 a.n.e.**, tras a derrota de **Cleopatra e Marco Antonio** en **Accio**.
 
-* **Filosofía**:
+Con esa data remata o mundo helenístico e comeza a **etapa romana**, na que o helenismo pasará a formar parte esencial da cultura imperial.
 
-    * **Estoicismo** (Zenón de Citio): vivir segundo a razón e a natureza.
-    * **Epicureísmo** (Epicuro): busca da felicidade a través da moderación e a amizade.
-    * **Escepticismo** (Pirro): imposibilidade de alcanzar certezas absolutas.  
+---
+
+> O helenismo non significou o fin da cultura grega, senón a súa **universalización**:  
+> Roma herdará e transmitirá esa herdanza, convertendo a Grecia na **profesora do mundo antigo**.
 
 ---
 
 ## 2. Roma
 
-**Roma** pasa de monarquía a **república** (expansión por Italia e o Mediterráneo) e despois ao **imperio**, que integra unha enorme diversidade baixo leis, infraestruturas e cidades.
+A historia de **Roma** abrangue máis dun milenio e pode dividirse en tres grandes etapas: **monarquía**, **república** e **imperio**.  
+A cidade, que comezou como un pequeno asentamento nas marxes do Tíber, chegou a dominar todo o Mediterráneo e a converterse nunha das civilizacións máis influentes da historia.
+
+---
 
 ### 2.1 Etapas históricas (visión xeral)
 
-**Secuencia básica (sen mermaid):**
-- **753–509 a.n.e. · Monarquía** (tradición e influencias etruscas).
-- **509–27 a.n.e. · República** → Senado, maxistraturas; expansión e **Guerras Púnicas**.
-- **27 a.n.e.–235 d.C. · Principado** (de **Augusto** a Severos) → **Pax Romana**.
-- **235–284 d.C. · Crise do século III**.
-- **284–476 d.C. · Dominado**; reformas de Diocleciano/Constantino; **476**: caída de Occidente (pervive Oriente).
+<div class="timeline">
 
-!!! example "Mapa interactivo · Expansión romana (placeholder)"
-    <div class="embed video-16x9">
-      <iframe 
-          src="../assets/mapa_expansion_romana_interactivo.html"
-          title="Mapa interactivo: expansión de Roma"
-          loading="lazy"
-          allowfullscreen
-          style="border:0;"></iframe>
+  <div class="tl-item">
+    <div class="tl-year">753–509 a.n.e.</div>
+    <div class="tl-content">
+      <strong>Monarquía</strong><br>
+      Fundación lendaria e influencias etruscas.
     </div>
-
-### 2.2 República: institucións e expansión
-
-- **Institucións**: **Senado**, **cónsules**, **pretores**, **tribunos da plebe**.
-- **Expansión**: control de Italia; **Guerras Púnicas** (Cartago) → dominio do Mediterráneo.
-- **Infraestruturas**: **vías** (Appia, Flaminia), **acuedutos**, **portos** (Óstia/Portus).
-
-### 2.3 Imperio: de Augusto á crise
-
-![Augusto de Prima Porta (placeholder)](../assets/augusto_prima_porta.webp){.zoom width="65%" .rounded }
-
-- **Augusto (27 a.n.e.)**: inicio do **Principado**; **Pax Romana** (s. I–II d.C.).
-- **Século III**: crises militares/económicas; reformas de **Diocleciano** e **Constantino**.
-- **División (395)** e **476 d.C.**: caída de Occidente (o Oriente bizantino continúa).
-
-??? tip "Vídeo: Roma da República ao Imperio (placeholder)"
-    <div class="embed video-16x9">
-      <iframe src="https://www.youtube.com/embed/ID_VIDEO_ROMA"
-              title="Roma: República → Imperio"
-              loading="lazy" allowfullscreen></iframe>
-    </div>
-
----
-
-## 3. Cronoloxía comparada
-
-!!! example "Táboa sincrónica (séculos e fitos)"
-    | Século | Grecia | Roma |
-    |---:|---|---|
-    | **VIII a.n.e.** | Polis arcaicas; colonización | Fundación lendaria (753 a.n.e.); monarquía |
-    | **VI a.n.e.** | Reformas en Atenas (Solón/Clístenes) | Fin da monarquía; **República** (509 a.n.e.) |
-    | **V a.n.e.** | **Guerras Médicas**; Peloponeso | Conquista de Italia central |
-    | **IV a.n.e.** | **Alexandre**; helenismo | Guerras samnitas; Italia |
-    | **III–II a.n.e.** | Reinos helenísticos | **Guerras Púnicas**; dominio mediterráneo |
-    | **I a.n.e.** | Integración en órbita romana | Crises; **Augusto** (27 a.n.e.) |
-    | **I–II d.C.** | Cultura helenística viva | **Pax Romana**; apoxeo |
-    | **III–V d.C.** | — | Crise; división; **476 d.C.** |
-
----
-
-## 4. Grecia → Roma: herdanza e influencia
-
-Roma **admira e integra** Grecia: relixión, arte, pensamento, educación…
-
-<div role="note" aria-label="Sabías que?" style="border:1px solid #e5e7eb;border-left:6px solid #22c55e;background:#f8fff9;padding:16px 18px;border-radius:12px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 1px 2px rgba(0,0,0,0.04);">
-  <div style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:18px;">
-    💡
   </div>
-  <div style="flex:1 1 auto;">
-    <div style="font-weight:700;font-size:16px;line-height:1.2;margin-bottom:6px;color:#065f46;">
-      Sabías que…?
+
+  <div class="tl-item">
+    <div class="tl-year">509–27 a.n.e.</div>
+    <div class="tl-content">
+      <strong>República</strong><br>
+      Institucións colexiadas, expansión e Guerras Púnicas.
     </div>
-    <ul style="margin:0;padding-left:18px;color:#064e3b;">
-      <li>Moitos mestres e artistas activos en Roma eran <em>gregos</em> ou formados en tradición grega.</li>
-      <li>Os romanos traduciron e reescribiron moitos xéneros: epopea, teatro, filosofía…</li>
-      <li>O latín incorporou numerosos <em>helenismos</em> (e nós herdámolos nas linguas romances).</li>
-    </ul>
   </div>
+
+  <div class="tl-item">
+    <div class="tl-year">27 a.n.e.–476 e.c.</div>
+    <div class="tl-content">
+      <strong>Imperio</strong><br>
+      Principado, Pax Romana, crise e caída de Occidente.
+    </div>
+  </div>
+
 </div>
 
-!!! info "Puntos clave da transferencia cultural"
-    - **Relixión/mitoloxía**: identificación de deuses (Zeus→Xúpiter, Atenea→Minerva, etc.).
-    - **Arte/arquitectura**: ordes clásicas (dórico, xónico, corintio) e adaptacións romanas (arco e bóveda).
-    - **Pensamento/educación**: estoicismo, epicureísmo, retórica; **paideía** grega en Roma.
-    - **Ciencia/técnica**: Hipócrates–Galeno, Euclides–Arquímedes, Estrabón.
-    - **Romanización**: fixo universal a herdanza grega no Mediterráneo.
+---
 
-??? tip "Vídeo: Que herdou Roma de Grecia? (placeholder)"
+### Monarquía (753–509 a.n.e.)
+
+Segundo a tradición, **Roma foi fundada por Rómulo** no 753 a.n.e., á beira do río **Tíber**, sobre o monte **Palatino**.  
+Durante esta etapa gobernaron **sete reis**, entre eles **Rómulo**, **Numa Pompilio**, **Servio Tulio** e **Tarquinio o Soberbio**. Os últimos monarcas eran **etruscos**, e achegaron coñecementos técnicos, relixiosos e urbanísticos.
+
+O poder político estaba concentrado no **rei**, asistido polo **Senado** (consello de anciáns) e pola **asemblea popular**.  
+Nesta época establecéronse as bases da sociedade romana:
+
+- **Patricios**: aristocracia fundadora, con dereitos políticos plenos.  
+- **Plebeos**: maioría da poboación, sen participación inicial no goberno.  
+- **Clientes e escravos**, con escasa ou nula liberdade xurídica.
+
+A organización relixiosa e o calendario festivo tiñan unha grande influencia etrusca.  
+A monarquía terminou coa **expulsión de Tarquinio o Soberbio** e o establecemento da República.
+
+![Rapto das Sabinas](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicwqM2vJOTqczkgIcM3J0sx7c_b7gmVzXwaxqQtaWUbTx3AIZvSOtYxt65nAYUEY1GpXGvbYYq1aVfMesFQDH9prZnlja83lL-GiMedQjwgmLMUufNuv70EUaBv-rvg9Hv0cpsFgY0bEQ/w1200-h630-p-k-no-nu/DavidSabinas01+%25281%2529.jpg){.rounded .shadow-sm width="70%"}
+
+---
+
+### República (509–27 a.n.e.)
+
+A República naceu coa idea de evitar o poder absoluto dun único gobernante.  
+O sistema baseábase na **colexialidade** (compartir o poder) e na **rotación anual dos cargos**.  
+
+#### Institucións principais
+
+- **Senado** → corpo permanente de antigos maxistrados que asesoraban e controlaban as decisións políticas.  
+- **Cónsules** → dous dirixentes con autoridade militar e executiva.  
+- **Pretores** → encargados da xustiza.  
+- **Censores** → controlaban o censo e a moral pública.  
+- **Tribunos da plebe** → defensores dos dereitos do pobo fronte aos abusos da aristocracia.
+
+#### Sociedade e conflitos internos
+
+Durante os primeiros séculos da República, a loita entre **patricios** e **plebeos** levou a reformas progresivas: creación das **leis das XII Táboas** (s. V a.n.e.), acceso da plebe ás maxistraturas e integración política dos cidadáns non aristócratas.  
+Roma consolidouse como unha **república de propietarios libres**, con forte disciplina militar e valores de virtude cívica (mos maiorum).
+
+#### Expansión mediterránea
+
+Roma pasou de controlar o Lacio a dominar toda Italia e, despois, o Mediterráneo occidental.  
+As etapas principais foron:
+
+1. **Guerras samnitas** → conquista de Italia central (s. IV–III a.n.e.).  
+2. **Guerras Púnicas** contra **Cartago** (264–146 a.n.e.) → vitoria romana e destrución da rival africana.  
+3. Conquista de **Grecia, Asia Menor, Hispania e Exipto**, integrando o mundo helenístico.  
+
+A expansión xerou riqueza e tamén desigualdade: o influxo de escravos e botíns transformou a sociedade rural e provocou conflitos sociais.
+
+#### Crise da República
+
+A concentración de poder en xenerais como **Mario**, **Sila**, **Pompeio** e **César** levou a sucesivas **guerras civís**.  
+En **46 a.n.e.**, **Xulio César** foi nomeado ditador vitalicio, e tras o seu asasinato, **Octavio Augusto** conseguiu o control absoluto do Estado, poñendo fin á República.
+
+---
+
+### Expansión romana
+
+<figure class="embed image">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Roman_Empire_map.gif"
+       alt="Mapa animado da expansión do Imperio Romano"
+       loading="lazy">
+  <figcaption style="text-align:center; font-size:0.85rem; margin-top:.4rem;">
+    <em>Expansión territorial de Roma (753 a.n.e.–117 e.c.)</em>
+  </figcaption>
+</figure>
+
+---
+
+### Imperio (27 a.n.e.–476 e.c.)
+
+Con **Augusto** (27 a.n.e.–14 e.c.) comeza o **Imperio**, e concretamente a fase do **Principado**, na que o emperador concentraba o poder baixo a aparencia das antigas institucións republicanas.
+
+#### O Principado e a Pax Romana
+
+Durante dous séculos, o Imperio gozou dunha longa **Pax Romana**, caracterizada pola estabilidade, o crecemento económico e unha ampla rede de cidades, estradas e acuedutos.  
+As provincias integráronse mediante a **romanización**, que difundiu o dereito, a lingua latina e o modo de vida romano.
+
+Baixo os emperadores da dinastía **xulio-claudia** (Tiberio, Calígula, Claudio e Nerón) e dos **Antoninos** (Traxano, Adriano, Marco Aurelio), o Imperio alcanzou a súa máxima extensión e esplendor.
+
+#### Crise e reformas
+
+No **século III e.c.**, o Imperio entrou en crise:  
+- Inseguridade nas fronteiras (invasións xermánicas e persas).  
+- Depreciación da moeda e caída do comercio.  
+- Inestabilidade política con usurpadores e emperadores efémeros.
+
+Para restaurar a orde, **Diocleciano** (284–305) implantou un sistema de **tetrarquía** (catro emperadores) e reforzou o autoritarismo do Estado (**Dominado**).  
+**Constantino** legalizou o cristianismo (Edicto de Milán, 313), reorganizou o exército e fundou **Constantinopla** (330), que se convertería na nova capital imperial.
+
+#### Caída de Occidente
+
+A finais do século IV, o Imperio dividiuse definitivamente en dúas partes:  
+- **Imperio de Occidente**, con capital en Roma e despois en Rávena.  
+- **Imperio de Oriente**, con capital en Constantinopla.
+
+En **476 e.c.**, o xeneral xermano **Odoacro** depuxo ao último emperador romano de Occidente, **Rómulo Augústulo**, marcando simbolicamente o fin do Imperio Romano de Occidente.  
+O Oriente, coñecido como **Imperio Bizantino**, perduraría ata 1453.
+
+---
+
+### Cultura e legado
+
+O mundo romano destacou pola súa **capacidade integradora** e pola difusión dun modelo político, xurídico e cultural común.
+
+- **Dereito romano**: base das lexislacións europeas posteriores.  
+- **Infraestruturas**: estradas, pontes, portos, termas e anfiteatros, moitos deles aínda conservados.  
+- **Urbanismo**: trazado regular das cidades e edificios públicos monumentais.  
+- **Relixión e arte**: sincretismo cos deuses e estilos gregos.  
+- **Lingua**: o latín converteuse na raíz das linguas romances (galego, castelán, francés, italiano...).  
+
+Roma legou á posteridade a idea dun **imperio civilizador**, unido por leis e cidadanía máis que por orixe étnica.
+
+---
+
+### Para saber máis
+
+??? tip "Vídeo: A Monarquía romana"
     <div class="embed video-16x9">
-      <iframe src="https://www.youtube.com/embed/ID_VIDEO_HELENIZACION"
-              title="Grecia → Roma: herdanza"
-              loading="lazy" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H1OVoqqXW2M?si=OImJYDgVfflXgjUO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
----
-
-## 5. Exercicios (solucións ocultas)
-
-1️⃣ **Liña do tempo de Grecia**  
-??? example "Ordea os fitos — solución posible"
-    1. Civilización minoica (c. 2000–1400 a.n.e.)  
-    2. Cultura micénica (c. 1600–1100 a.n.e.)  
-    3. Idade escura (c. 1100–800 a.n.e.)  
-    4. Período arcaico (c. 800–500 a.n.e.)  
-    5. Período clásico (c. 500–323 a.n.e.)  
-    6. Período helenístico (323–31 a.n.e.)
-
-2️⃣ **Liña do tempo de Roma**  
-??? example "Fitos principais — solución posible"
-    1. Fundación lendaria (753 a.n.e.) → Monarquía  
-    2. República (509 a.n.e.)  
-    3. Guerras púnicas (264–146 a.n.e.)  
-    4. Ditadura de César (49–44 a.n.e.)  
-    5. Imperio con Augusto (27 a.n.e.)  
-    6. Pax Romana (s. I–II d.C.)  
-    7. Crise do s. III → Reformas  
-    8. División (395) → 476 (Occidente)
-
-3️⃣ **Grecia → Roma (6–8 liñas)**  
-??? example "Resposta modelo"
-    Roma adaptou deuses e mitos gregos, asumiu modelos artísticos e filosóficos e incorporou a paideía (educación) helénica ás elites. Co Imperio, a herdanza grega espallouse por todo o Mediterráneo, construíndo un **espazo cultural común** helenístico-romano.
-
-- [ ] **Tarefa de portfolio:**  
-      **Liña do tempo ilustrada** con 10 fitos (5 Grecia + 5 Roma).  
-      Para cada fito: **data**, **2–3 liñas** e **icona/imaxe**.
-
----
-
-## 6. Materiais imprimibles (placeholders)
-
-- **Apuntes completos (PDF):** ../materiais/ud2_apuntes.pdf  
-- **Esquema cronolóxico (JPG/PNG):** ../materiais/esquema_cronoloxia.jpg  
-- **Mapas en alta calidade (PDF):**
-  - ../materiais/mapa_mediterraneo.pdf
-  - ../materiais/mapa_polis_gregas.pdf
-  - ../materiais/mapa_expansion_romana.pdf
-
----
-
-## 7. Textos para comentar (placeholders)
-
-- **Tucídides**, *Guerra do Peloponeso* (selección adaptada): ../textos/tucidides_peloponeso.md  
-- **Tito Livio**, *Ab urbe condita* (fundación de Roma, adapt.): ../textos/tito_livio_fundacion.md
-
-<small>Cada texto debería incluír: vocabulario, contextualización, preguntas de comprensión e relación cronolóxica.</small>
-
----
 
 <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
 <script>
