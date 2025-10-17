@@ -25,6 +25,30 @@ A partir do **II milenio a.n.e.**, chegaron os **indo-iranios**, parte da famili
 
 Estes pobos compartían lingua, relixión solar e estrutura social aristocrática.
 
+
+Тоҷик:
+
+![Tajicks](https://static.wikia.nocookie.net/totalwar-ar/images/d/da/Tajiks.jpg/revision/latest?cb=20160701211131)
+ 
+пашту́ны
+
+![Pashtuns](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pashtuns.jpg/800px-Pashtuns.jpg)
+
+Нуристанцы
+
+![nuristani](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt-Yr26qagCmGFPUGUS_IyLkcZHCbjRSSvzQ&s)
+
+![nuristani](https://preview.redd.it/0ypbuzt2j8081.jpg?auto=webp&s=f2553bceabdf9d54fbd6b946ad95c7b4cde2a78d)
+
+Farsi
+
+![Persas](https://cdn01.eavartravel.com/2024/5/b268ad24-1e1b-4510-9dca-614f39fc4ffe.jpg)
+
+Ossetios
+
+![Ossetian](https://georgiaabout.com/wp-content/uploads/2014/12/the-ossetian-song-and-dance-ensemble-yarn-performing-an-ossetian-folk-dance.jpg)
+![Ossetian](https://jam-news.net/app/uploads/2024/07/photo_2024-07-19_19-27-22.jpg)
+
 ---
 
 ### 2.1 Medos e persas
