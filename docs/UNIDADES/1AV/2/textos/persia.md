@@ -28,7 +28,7 @@ Estes pobos compartían lingua, relixión solar e estrutura social aristocrátic
 
 Тоҷик:
 
-![Tajicks](https://static.wikia.nocookie.net/totalwar-ar/images/d/da/Tajiks.jpg/revision/latest?cb=20160701211131)
+![Tajicks](https://i0.wp.com/pamirinside.org/wp-content/uploads/2023/05/pamirskaja-odezhda3.jpg?fit=768%2C484&ssl=1)
  
 пашту́ны
 
