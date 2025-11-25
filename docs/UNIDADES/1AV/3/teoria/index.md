@@ -28,6 +28,15 @@ Os mitos cumprían funcións moi diversas:
 
 Por iso dicimos que o mito non é un conto infantil, senón unha **forma primitiva pero sofisticada de filosofía narrada**. Igual que hoxe empregamos películas, novelas ou series para expresar ideas complexas, os gregos utilizaban o mito para dotar de sentido á súa experiencia e á do seu pobo.
 
+Os mitos pódense clasificar segundo o que explican:
+
+* **Mitos cosmogónicos** – Explican a creación e a orixe do universo (ex.: *Hesíodo, Caos → Xea → Urano*).
+* **Mitos teogónicos** – Tratan sobre a orixe e xeración dos deuses (ex.: *Urano, Xea e os Titáns*).
+* **Mitos antropoxénicos** – Explican a orixe do ser humano (ex.: *Prometeo modelando aos homes*).
+* **Mitos etiolóxicos** – Relatan a orixe de institucións, cultos ou fenómenos sociais (ex.: *o mito de Deméter e Perséfone para explicar as estacións*).
+* **Mitos escatolóxicos** – Tratan sobre o destino da alma despois da morte (ex.: *o xuízo das almas no Hades*).
+* **Mitos morais** – Abordan cuestións éticas sobre o ben, o mal ou a xustiza divina (ex.: *Castigos de Sísifo ou Tántalo*).
+
 ---
 
 # 2. Cosmogonía e teogonía: de onde vén todo?
