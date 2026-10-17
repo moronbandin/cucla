@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="gl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa · Colonización grega (Magna Grecia, Occidente e Mar Negro)</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin
+  ></script>
+
+  <style>
+    html, body { height:100%; margin:0; }
+    #map { height:100%; width:100%; }
+    .leaflet-popup-content h3 { margin:.2rem 0 .2rem; font-size:16px; }
+    .leaflet-popup-content p { margin:.2rem 0; }
+    .leaflet-popup-content small { color:#555; }
+    .md-btn { display:inline-block; padding:.35rem .6rem; border:1px solid #ccc; border-radius:.4rem; background:#fff; font-size:12px; text-decoration:none; }
+    .legend {
+      background: #fff; padding: .6rem .8rem; border-radius: .5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1); font: 12px/1.3 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    .legend h4 { margin: 0 0 .3rem; font-size: 13px; }
+    .legend .row { display:flex; align-items:center; gap:.4rem; margin:.15rem 0; }
+    .legend .dot { width: 12px; height:12px; border-radius: 50%; display:inline-block; border:1px solid #00000022; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    // ----- MAPA -----
+    const map = L.map('map', { zoomControl: true, minZoom: 3, maxZoom: 18 })
+                 .setView([38.5, 18.0], 5);
+
+    // ----- CAPAS BASE -----
+    const baseSatEsri = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: 'Imágenes &copy; Esri' }
+    ).addTo(map);
+
+    const basePlanoOSM = L.tileLayer(
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      { maxZoom: 19, attribution: '&copy; OpenStreetMap contribuidores' }
+    );
+
+    const baseRuasEsri = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: '&copy; Esri' }
+    );
+
+    const baseTopoEsri = L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: '&copy; Esri' }
+    );
+
+    const baseCartoClaro = L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      { maxZoom: 20, attribution: '&copy; OpenStreetMap &copy; CARTO' }
+    );
+
+    const baseCartoEscuro = L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+      { maxZoom: 20, attribution: '&copy; OpenStreetMap &copy; CARTO' }
+    );
+
+    const baseLayers = {
+      'Satélite (Esri)': baseSatEsri,
+      'Plano (OSM)': basePlanoOSM,
+      'Rúas (Esri)': baseRuasEsri,
+      'Topográfico (Esri)': baseTopoEsri,
+      'Positrón claro (CARTO)': baseCartoClaro,
+      'Escuro (CARTO)': baseCartoEscuro
+    };
+
+    // ----- RÓTULOS SOBRE SATÉLITE -----
+    const rotulosEsri = L.tileLayer(
+      'https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, opacity: 0.85, attribution: '&copy; Esri — Rótulos' }
+    ).addTo(map);
+
+    // ----- CAPAS TEMÁTICAS -----
+    const capaMetropoles = L.layerGroup();         // polis de orixe
+    const capaMagnaGrecia = L.layerGroup();        // colonias en Italia/Sicilia
+    const capaOccidente = L.layerGroup();          // colonias en Galia/Levante ibérico/Córsega
+    const capaMarNegro = L.layerGroup();           // colonias no Ponto Euxino
+    const capaRotas = L.layerGroup();              // rutas/liaisons principais
+
+    // ---- helpers de marcadores por cor ----
+    function addCity(layer, coords, title, html, color = '#1d4ed8') {
+      const marker = L.circleMarker(coords, {
+        radius: 6, color, weight: 2, fillColor: color, fillOpacity: 0.85
+      }).addTo(layer);
+      marker.bindPopup(html, { maxWidth: 320 });
+      return marker;
+    }
+
+    // ---- METRÓPOLES (polis de orixe) ----
+    addCity(capaMetropoles, [37.9838, 23.7275], "Atenas",
+      `<h3>Athênai (Atenas)</h3>
+       <small>Ática — metrópole clásica</small>
+       <p>Centro político e cultural. Impulso á colonización marítima.</p>`,
+       '#1d4ed8');
+
+    addCity(capaMetropoles, [37.994, 23.343], "Mégara",
+      `<h3>Mégara</h3>
+       <small>Ática occidental</small>
+       <p>Metrópole de <strong>Bizancio</strong> e <strong>Calcedonia</strong>.</p>`,
+       '#1d4ed8');
+
+    addCity(capaMetropoles, [38.463, 23.602], "Cálcide (Eubea)",
+      `<h3>Khalkís (Cálcide)</h3>
+       <small>Eubea</small>
+       <p>Co-fundadora de <strong>Cumas</strong> con <em>Eretria</em>; impulso a Occidente.</p>`,
+       '#1d4ed8');
+
+    addCity(capaMetropoles, [38.402, 23.796], "Eretria (Eubea)",
+      `<h3>Eretria</h3>
+       <small>Eubea</small>
+       <p>Participa na fundación de <strong>Cumas</strong> e <strong>Pithekoussai</strong>.</p>`,
+       '#1d4ed8');
+
+    addCity(capaMetropoles, [38.670, 26.756], "Focea (Asia Menor)",
+      `<h3>Phṓkaia (Focea)</h3>
+       <small>Asia Menor — Xonia</small>
+       <p>Metrópole de <strong>Massalia</strong>, <strong>Alalia</strong>, <strong>Emporion</strong> e <strong>Rhode</strong>.</p>`,
+       '#1d4ed8');
+
+    addCity(capaMetropoles, [37.530, 27.276], "Mileto (Asia Menor)",
+      `<h3>Mílētos (Mileto)</h3>
+       <small>Asia Menor — Xonia</small>
+       <p>Gran metrópole do <strong>Mar Negro</strong> (Sinope, Trapezus...).</p>`,
+       '#1d4ed8');
+
+    addCity(capaMetropoles, [37.9381, 22.9322], "Corinto",
+      `<h3>Kórinthos (Corinto)</h3>
+       <small>Istmo de Corinto</small>
+       <p>Metrópole de <strong>Siracusa</strong> e outras colonias sicilianas.</p>`,
+       '#1d4ed8');
+
+    // ---- COLONIAS · MAGNA GRECIA (Italia e Sicilia) ----
+    addCity(capaMagnaGrecia, [40.731, 13.896], "Pithekoussai (Ischia)",
+      `<h3>Píthekoussai</h3>
+       <small>s. VIII a.C. — Focea/Eubea</small>
+       <p>Primeiro establecemento grego no Tirreno. Factoría comercial.</p>`,
+       '#059669');
+
+    addCity(capaMagnaGrecia, [40.847, 14.065], "Cumas",
+      `<h3>Kaumaí (Cumas)</h3>
+       <small>s. VIII a.C. — Cálcide/Eretria</small>
+       <p>Colonia arcaica clave no golfo de Nápoles. Inflúe en <em>Neápolis</em>.</p>`,
+       '#059669');
+
+    addCity(capaMagnaGrecia, [40.851, 14.268], "Neápolis (Nápoles)",
+      `<h3>Neápolis</h3>
+       <small>s. VI a.C. — Eubea</small>
+       <p>“Cidade nova” grega que será gran porto romano.</p>`,
+       '#059669');
+
+    addCity(capaMagnaGrecia, [40.469, 17.241], "Taras (Tarento)",
+      `<h3>Taras (Tarento)</h3>
+       <small>s. VIII a.C. — Esparta</small>
+       <p>Potencia doria na Apulia. Papel militar e comercial destacado.</p>`,
+       '#059669');
+
+    addCity(capaMagnaGrecia, [39.768, 16.449], "Sybaris (Síbari)",
+      `<h3>Sybaris</h3>
+       <small>s. VII a.C. — Acaia</small>
+       <p>Riqueza lendaria; destruída por Crotona (Kroton).</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [39.080, 17.125], "Kroton (Crotona)",
+      `<h3>Krotōn</h3>
+       <small>s. VII a.C. — Acaia</small>
+       <p>Escola de Pitágoras; rivalidade con Sybaris.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [38.111, 15.647], "Rhegion (Reggio)",
+      `<h3>Rhḗgion</h3>
+       <small>s. VIII a.C. — Cálcide</small>
+       <p>Control do estreito de Messina (Zankle).</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [38.193, 15.554], "Zankle/Messana (Messina)",
+      `<h3>Zankle (Messana)</h3>
+       <small>s. VIII a.C. — Cálcide</small>
+       <p>Pezas clave do corredor tirrénico-exeo.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.824, 15.267], "Naxos (Sicilia)",
+      `<h3>Náxos (Sicilia)</h3>
+       <small>s. VIII a.C. — Cálcide</small>
+       <p>Primeira colonia grega en Sicilia oriental.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.507, 15.083], "Katánē (Catania)",
+      `<h3>Katánē</h3>
+       <small>s. VIII a.C. — Cálcide</small>
+       <p>Colonia próxima ao Etna; gran fertilidade.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.059, 15.293], "Syrákousai (Siracusa)",
+      `<h3>Syrákousai</h3>
+       <small>s. VIII a.C. — Corinto</small>
+       <p>Gran potencia siciliana; expansión sobre Akrai, Kamarina...</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.073, 14.240], "Gela",
+      `<h3>Gélā</h3>
+       <small>s. VII a.C. — Rodos/Creta</small>
+       <p>Coloniza <em>Akragas</em>. Peso agrícola e político.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.311, 13.576], "Akragas (Agrigento)",
+      `<h3>Akrágas</h3>
+       <small>s. VI a.C. — Gela</small>
+       <p>Templos monumentais; riqueza cerealística.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.585, 12.825], "Selinous (Selinunte)",
+      `<h3>Selinoûs</h3>
+       <small>s. VII a.C. — Mégara Hyblaea</small>
+       <p>Fronteira con cartaxineses; templos dóricos.</p>`,
+      '#059669');
+
+    addCity(capaMagnaGrecia, [37.989, 13.824], "Himera",
+      `<h3>Himera</h3>
+       <small>s. VII a.C. — Zankle</small>
+       <p>Batalla de 480 a.C. contra cartaxineses (coincide con Termópilas).</p>`,
+      '#059669');
+
+    // ---- COLONIAS · OCCIDENTE (Galia, Córsega, Levante ibérico) ----
+    addCity(capaOccidente, [43.296, 5.369], "Massalia (Marsella)",
+      `<h3>Massalía</h3>
+       <small>s. VI a.C. — Focea</small>
+       <p>Gran porto galo; fundación de <em>Nikaia</em> e <em>Antípolis</em>.</p>`,
+      '#b45309');
+
+    addCity(capaOccidente, [42.107, 9.515], "Alalia (Aleria, Córsega)",
+      `<h3>Alalía</h3>
+       <small>s. VI a.C. — Focea</small>
+       <p>Conflito naval con etruscos e cartaxineses (batalha do mar Sardo).</p>`,
+      '#b45309');
+
+    addCity(capaOccidente, [43.700, 7.265], "Nikaia (Niza)",
+      `<h3>Nikáia (Niza)</h3>
+       <small>Colonización masaliota</small>
+       <p>Rede de postos no litoral ligur.</p>`,
+      '#b45309');
+
+    addCity(capaOccidente, [42.127, 3.118], "Emporion (Empúries)",
+      `<h3>Empórion (Empúries)</h3>
+       <small>s. VI a.C. — Focea/Massalia</small>
+       <p>Punto de contacto grego co nordeste ibérico; intercambio con íberos.</p>`,
+      '#b45309');
+
+    addCity(capaOccidente, [42.262, 3.176], "Rhode (Roses)",
+      `<h3>Rhṓdē (Roses)</h3>
+       <small>s. VI a.C. — Focea</small>
+       <p>Colonia setentrional no golfo de León-empordanés.</p>`,
+      '#b45309');
+
+    addCity(capaOccidente, [38.840, 0.105], "Hemeroskopeion (Dénia, probable)",
+      `<h3>Hēmeroskópeion (prob.)</h3>
+       <small>Levante ibérico</small>
+       <p>Posto grego citado por fontes; debate arqueolóxico.</p>`,
+      '#b45309');
+
+    // ---- COLONIAS · MAR NEGRO (Ponto Euxino) ----
+    addCity(capaMarNegro, [41.012, 28.976], "Byzantion (Istambul)",
+      `<h3>Byzántion</h3>
+       <small>s. VII a.C. — Mégara</small>
+       <p>Control do Bósforo; futuro <em>Constantinopla</em>.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [40.978, 29.073], "Chalkedón (Calcedonia)",
+      `<h3>Khalkēdṓn</h3>
+       <small>s. VII a.C. — Mégara</small>
+       <p>“Cidade dos cegos” fronte a Bizancio (dixérase).</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [42.026, 35.153], "Sinope",
+      `<h3>Sínōpē</h3>
+       <small>s. VII a.C. — Mileto</small>
+       <p>Gran entreposto do Ponto; metrópole de Trapezus.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [41.003, 39.717], "Trapezus (Trabzon)",
+      `<h3>Trapézous</h3>
+       <small>s. VII a.C. — Mileto</small>
+       <p>Escala oriental; comercio con Cáucaso.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [46.623, 31.049], "Olbia (Ucraína)",
+      `<h3>Olbia</h3>
+       <small>s. VI a.C. — Mileto</small>
+       <p>Boca do Bug/Dniéper; graos e peixes salgados.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [44.616, 33.525], "Chersonesos (Sevastopol)",
+      `<h3>Khersonēsos</h3>
+       <small>s. V a.C. — Doria</small>
+       <p>Pequena península de Táurica; actividade agrícola e vitícola.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [45.356, 36.467], "Panticapaeum (Kerch)",
+      `<h3>Pantikápaion</h3>
+       <small>s. VI a.C. — Mileto</small>
+       <p>Capital do Reino do Bósforo Cimerio.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [44.173, 28.638], "Tomis (Constanţa)",
+      `<h3>Tómis</h3>
+       <small>s. VI a.C. — Mileto</small>
+       <p>Posteriormente desterro de Ovidio en época romana.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [43.204, 27.916], "Odessos (Varna)",
+      `<h3>Odēssós</h3>
+       <small>s. VI a.C. — Mileto</small>
+       <p>Rede de portos tracios no leste balcánico.</p>`,
+      '#7c3aed');
+
+    addCity(capaMarNegro, [42.421, 27.698], "Apollonia Pontica (Sozopol)",
+      `<h3>Apollōnía Póntikē</h3>
+       <small>s. VI a.C. — Mileto</small>
+       <p>Colonia con importante culto a Apolo.</p>`,
+      '#7c3aed');
+
+    // ---- OUTRAS COLONIAS · NORTE DE ÁFRICA ----
+    addCity(capaOccidente, [32.827, 21.858], "Kyrene (Cirene, Libia)",
+      `<h3>Kurēnḗ (Cirene)</h3>
+       <small>s. VII a.C. — Tera</small>
+       <p>Potente cidade cirenaica; comercio e filosofía (Escola cirenaica).</p>`,
+      '#b45309');
+
+    addCity(capaOccidente, [30.884, 30.180], "Náucratis (Exipto)",
+      `<h3>Naúkratis</h3>
+       <small>s. VII a.C. — Grega en Exipto</small>
+       <p>Emporio grego autorizado polos faraóns; nó de intercambio cultural.</p>`,
+      '#b45309');
+
+    // ---- ROTAS PRINCIPAIS (trazos orientativos) ----
+    // Focea → Massalia → Emporion / Rhode
+    L.polyline([[38.670,26.756],[42.107,9.515],[43.296,5.369],[42.127,3.118],[42.262,3.176]],
+      { color:'#b45309', weight:2, opacity:.7, dashArray:'6,6' }).addTo(capaRotas)
+      .bindPopup('<strong>Ruta focense</strong>: Focea → Alalia → Massalia → Emporion/Rhode');
+
+    // Cálcide/Eretria → Pithekoussai → Cumas → Neápolis
+    L.polyline([[38.463,23.602],[40.731,13.896],[40.847,14.065],[40.851,14.268]],
+      { color:'#059669', weight:2, opacity:.7, dashArray:'6,6' }).addTo(capaRotas)
+      .bindPopup('<strong>Ruta eubea</strong>: Eubea → Pithekoussai → Cumas → Neápolis');
+
+    // Mégara → Bizancio/Calcedonia
+    L.polyline([[37.994,23.343],[41.012,28.976],[40.978,29.073]],
+      { color:'#7c3aed', weight:2, opacity:.7, dashArray:'6,6' }).addTo(capaRotas)
+      .bindPopup('<strong>Ruta megárica</strong>: Mégara → Bizancio/Calcedonia');
+
+    // Mileto → Sinope → Trapezus
+    L.polyline([[37.530,27.276],[42.026,35.153],[41.003,39.717]],
+      { color:'#7c3aed', weight:2, opacity:.7, dashArray:'6,6' }).addTo(capaRotas)
+      .bindPopup('<strong>Ruta milesia</strong>: Mileto → Sinope → Trapezus');
+
+    // ----- ENGADIR CAPAS AO MAPA -----
+    capaMetropoles.addTo(map);
+    capaMagnaGrecia.addTo(map);
+    capaOccidente.addTo(map);
+    capaMarNegro.addTo(map);
+    capaRotas.addTo(map);
+
+    const overlays = {
+      'Rótulos (sobre satélite)': rotulosEsri,
+      'Metrópoles (polis de orixe)': capaMetropoles,
+      'Colonias · Magna Grecia': capaMagnaGrecia,
+      'Colonias · Occidente (Galia/Levante/África)': capaOccidente,
+      'Colonias · Mar Negro': capaMarNegro,
+      'Rotas de colonización (orientativas)': capaRotas
+    };
+
+    // Control de capas (bases + overlays)
+    L.control.layers(baseLayers, overlays, { collapsed: true }).addTo(map);
+
+    // Lenda (cores)
+    const legend = L.control({ position: 'bottomleft' });
+    legend.onAdd = function() {
+      const div = L.DomUtil.create('div', 'legend');
+      div.innerHTML = `
+        <h4>Colonización grega</h4>
+        <div class="row"><span class="dot" style="background:#1d4ed8"></span> Metrópoles (polis de orixe)</div>
+        <div class="row"><span class="dot" style="background:#059669"></span> Colonias · Magna Grecia</div>
+        <div class="row"><span class="dot" style="background:#b45309"></span> Colonias · Occidente</div>
+        <div class="row"><span class="dot" style="background:#7c3aed"></span> Colonias · Mar Negro</div>
+        <div class="row"><span class="dot" style="background:linear-gradient(45deg,#888 0,#888 100%);border-color:#888"></span> Rotas (trazos)</div>
+      `;
+      return div;
+    };
+    legend.addTo(map);
+
+    // Axustar vista a todo o conxunto
+    try {
+      const all = L.featureGroup([
+        ...capaMetropoles.getLayers(),
+        ...capaMagnaGrecia.getLayers(),
+        ...capaOccidente.getLayers(),
+        ...capaMarNegro.getLayers()
+      ]);
+      map.fitBounds(all.getBounds().pad(0.15));
+    } catch(e) {}
+
+    // Escala
+    L.control.scale({ metric: true, imperial: false }).addTo(map);
+  </script>
+</body>
+</html>

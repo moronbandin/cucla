@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="gl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tradutor GeoJSON → Leaflet (arrays embebidos)</title>
+<style>
+  body{font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",Arial,sans-serif;margin:0;background:#f6f7f9}
+  header{background:#222;color:#fff;padding:.8rem 1rem}
+  main{padding:1rem;display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+  textarea,input,select{width:100%;box-sizing:border-box;font:12px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  textarea{min-height:340px;border:1px solid #c9cdd3;border-radius:.5rem;padding:.6rem;background:#fff}
+  .card{background:#fff;border:1px solid #c9cdd3;border-radius:.6rem;padding:.8rem}
+  label{display:block;font-size:12px;color:#555;margin:.35rem 0 .2rem}
+  .row{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+  button{padding:.5rem .7rem;border:1px solid #98a2b3;border-radius:.5rem;background:#eef2ff;cursor:pointer}
+  .note{font-size:12px;color:#666}
+  .muted{color:#666}
+</style>
+</head>
+<body>
+<header><strong>Tradutor GeoJSON → Leaflet</strong> · pega o GeoJSON (Overpass, uMap, geojson.io) e xera arrays para L.polyline/L.polygon/L.marker</header>
+<main>
+  <section class="card">
+    <h3>Entrada GeoJSON</h3>
+    <textarea id="in" placeholder='Pega aquí o GeoJSON (Feature ou FeatureCollection)'></textarea>
+    <div class="row">
+      <div style="flex:1 1 120px">
+        <label>Nome da variable</label>
+        <input id="varname" value="capa1">
+      </div>
+      <div style="flex:1 1 120px">
+        <label>Tipo forzado (opcional)</label>
+        <select id="forceType">
+          <option value="">Auto (segundo xeometría)</option>
+          <option value="polyline">Polyline (río/liña)</option>
+          <option value="polygon">Polygon (rexión)</option>
+          <option value="marker">Marker (puntos)</option>
+        </select>
+      </div>
+      <div style="flex:1 1 80px">
+        <label>Decimais</label>
+        <input id="decimals" type="number" min="0" max="7" value="5">
+      </div>
+      <div style="flex:1 1 110px">
+        <label>Saltar cada N pts</label>
+        <input id="thin" type="number" min="1" value="1" title="1 = todos; 2 = coller un de cada dous, etc.">
+      </div>
+    </div>
+    <div class="row" style="margin-top:.4rem">
+      <div style="flex:1 1 100%">
+        <label>Estilo Leaflet (opcional)</label>
+        <input id="style" value="{ color:'#2a7', weight:3 }">
+      </div>
+    </div>
+    <div class="row" style="margin-top:.6rem">
+      <button id="gen">Xerar código</button>
+      <span class="note">Detecta LineString/MultiLineString → polyline; Polygon/MultiPolygon → polygon; Point/MultiPoint → marker.</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Saída (copia e pega no teu HTML)</h3>
+    <textarea id="out" placeholder="// aquí aparecerá o código Leaflet"></textarea>
+    <p class="note muted">Tip: podes xerar varias capas e pegalas seguidas no teu ficheiro. Se queres popups, engádeos logo con <code>.bindPopup(...)</code>.</p>
+  </section>
+</main>
+
+<script>
+const $in = document.getElementById('in');
+const $out = document.getElementById('out');
+const $gen = document.getElementById('gen');
+
+function round(n, d){ const p = Math.pow(10, d); return Math.round(n*p)/p; }
+function thinCoords(arr, step){ if (step<=1) return arr; const out=[]; for(let i=0;i<arr.length;i+=step){ out.push(arr[i]); } if (arr.length && out[out.length-1]!==arr[arr.length-1]) out.push(arr[arr.length-1]); return out; }
+
+function coordsToLeafletArray(coords, decimals, every){
+  // coords pode ser [[lon,lat], ...] (LineString) ou [[[lon,lat],...], ...] (Polygon: aneis)
+  function toLatLng(p){ return [ round(p[1], decimals), round(p[0], decimals) ]; }
+  if (!Array.isArray(coords)) return '[]';
+  if (typeof coords[0][0] === 'number'){ // LineString
+    const arr = thinCoords(coords.map(toLatLng), every);
+    return '[' + arr.map(pt => `[${pt[0]}, ${pt[1]}]`).join(',') + ']';
+  } else { // Polygon (aneis)
+    // Usamos só o anel exterior (coords[0]); se queres buratos, podes engadilos ti despois
+    const ring = coords[0] || [];
+    const arr = thinCoords(ring.map(toLatLng), every);
+    return '[' + arr.map(pt => `[${pt[0]}, ${pt[1]}]`).join(',') + ']';
+  }
+}
+
+function generate(){
+  let gj;
+  try { gj = JSON.parse($in.value); } catch(e){ alert('GeoJSON inválido'); return; }
+  const varname = document.getElementById('varname').value.trim() || 'capa1';
+  const force   = document.getElementById('forceType').value;
+  const decimals= parseInt(document.getElementById('decimals').value || '5', 10);
+  const every   = parseInt(document.getElementById('thin').value || '1', 10);
+  const style   = document.getElementById('style').value.trim() || '{}';
+
+  // Normalizamos a unha lista de features
+  let feats = [];
+  if (gj.type === 'FeatureCollection') feats = gj.features || [];
+  else if (gj.type === 'Feature') feats = [gj];
+  else if (gj.type && gj.coordinates) feats = [{ type:'Feature', geometry: gj, properties:{} }];
+  else { alert('Non se recoñece a estrutura GeoJSON.'); return; }
+
+  const lines = [];
+  let idx = 1;
+
+  feats.forEach(f => {
+    if (!f || !f.geometry) return;
+    const g = f.geometry;
+    const name = (f.properties && (f.properties.name || f.properties.NOME)) || `${varname}_${idx}`;
+    const popup = (f.properties && (f.properties.description || f.properties.DESCR || '')) || '';
+    const tForced = force;
+
+    // Multi* → expandimos en varias entidades
+    const expand = (g.type === 'MultiLineString' || g.type === 'MultiPolygon') ? g.coordinates : [g.coordinates];
+
+    expand.forEach((coords) => {
+      let t = tForced;
+      if (!t){
+        if (g.type.includes('Line')) t = 'polyline';
+        else if (g.type.includes('Polygon')) t = 'polygon';
+        else if (g.type.includes('Point')) t = 'marker';
+      }
+      if (t === 'marker'){
+        const p = (Array.isArray(coords[0])) ? coords[0] : coords; // MultiPoint usa lista
+        const lat = round(p[1], decimals), lon = round(p[0], decimals);
+        lines.push(
+`${varname}_${idx} = L.marker([${lat}, ${lon}]).addTo(map).bindPopup("<h3>${name}</h3><p>${popup.replace(/"/g,'&quot;')}</p>");`
+        );
+      } else if (t === 'polyline'){
+        const arr = coordsToLeafletArray(coords, decimals, every);
+        lines.push(
+`${varname}_${idx} = L.polyline(${arr}, ${style}).addTo(map).bindPopup("<h3>${name}</h3><p>${popup.replace(/"/g,'&quot;')}</p>");`
+        );
+      } else if (t === 'polygon'){
+        const arr = coordsToLeafletArray(coords, decimals, every);
+        lines.push(
+`${varname}_${idx} = L.polygon(${arr}, ${style}).addTo(map).bindPopup("<h3>${name}</h3><p>${popup.replace(/"/g,'&quot;')}</p>");`
+        );
+      }
+      idx++;
+    });
+  });
+
+  // Código helper para axustar vista (opcional)
+  const fit = `
+/* Opcional: axustar vista a todo o debuxado */
+try{
+  const _grp = L.featureGroup([${Array.from({length:idx-1}).map((_,i)=>varname+'_'+(i+1)).join(', ')}]);
+  map.fitBounds(_grp.getBounds().pad(0.15));
+}catch(e){};`;
+
+  $out.value = `// Pega isto no teu HTML (despois de crear o mapa "map")\nlet ${varname}_1;\n` + lines.join('\n') + '\n' + fit;
+}
+
+document.getElementById('gen').addEventListener('click', generate);
+</script>
+</body>
+</html>
